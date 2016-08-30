@@ -1,0 +1,23 @@
+.content{
+  padding-top: 30px;
+  .title{
+    background-color: #898989;
+    padding-top: 25px;
+    width: 80%;
+    margin: auto;
+    border-radius: 5px;
+    padding-bottom: 20px;
+    p{
+      text-align: center;
+      font-size: 54px;
+    }
+  }
+  p.center{
+      text-align: center;
+      font-size: 30px;
+    }
+  form{
+    width: 50%;
+    margin: auto;
+  }
+}
