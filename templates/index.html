@@ -1,4 +1,317 @@
-{% extends 'base.html' %}
-{% block header %}{% endblock %}
-{% block content %}{% endblock %}
-{% block footer %}{% endblock %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>首页</title>
+<link rel="stylesheet" href="static/bootstrap.min.css">
+    <link rel="stylesheet" href="static/index.css">
+ <script src="static/jquery.min.js"></script>
+</head>
+<body>
+<header class="container-fluid">
+    <div class="clearfix">
+    <form method="get" class="form1">
+    <input  type="text" placeholder="代理商姓名/微信号">
+        <img src="static/search2.png" class="search">
+    </form></div>
+    <div class="logo col-xs-5">
+        <ul class="hidden-xs">
+            <li><a href="#AboutUs">About Us</a></li>
+            <li><a href="#Founder">Founder</a></li>
+            <li><a href="#Leather">Leather Pants</a></li>
+            <li><a href="#Gallery">Gallery</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+    <img src="static/logo.png" class="img-responsive center-block">
+        <p class="line1">珂宣尼, 让你遇上完美的你自己</p><p class="line2">We are commit to you perfect since 2015</p>
+    </div>
+    <div class="col-xs-7 slide2">
+        <div class="col-xs-11 slide-1">
+    <div id="myCarousel" class="carousel slide">
+	<div class="carousel-inner">
+		<div class="item active">
+			<img src="static/slide-2.jpg" alt="First slide">
+		</div>
+		<div class="item">
+			<img src="static/slide-1.jpg" alt="Second slide">
+		</div>
+		<div class="item">
+			<img src="static/slide-3.jpg" alt="Third slide">
+		</div>
+	</div>
+</div> </div>
+    <div class="col-xs-4 slide-2"><div id="Carousel" class="carousel slide">
+	<div class="carousel-inner">
+		<div class="item active">
+			<img src="static/slide-5.jpg" alt="First slide">
+		</div>
+		<div class="item">
+			<img src="static/slide-4.jpg" alt="Second slide">
+		</div>
+		<div class="item">
+			<img src="static/slide-6.jpg" alt="Third slide">
+		</div>
+	</div>
+</div> </div></div>
+
+</header>
+<div class="content">
+    <div class="aboutus clearfix">
+    <p id="AboutUs">About Us</p>
+        <div class="about-1 about clearfix">
+            <div class="col-xs-6 text clearfix">
+                <div class="text2">
+                <p class="a1">Company</p>
+                <p class="a2">珂宣尼为广州溢然贸易有限公司旗下品牌,公司成立于2015年,注册资金一千万, 是一家专业从事产品研发,生产,销售的互联网+型公司。
+                我司核心团队由偏执狂组成,自然我们对产品本身品质,人体力学舒适,包装设计等都有着近乎狂热的偏执追求,一匠打造。</p>
+                <p class="a3">
+                    KEEXUENNL products series are:Ke Xuan leather pants.<br>
+                    KEEXUENNL customized repair hair mask,as well as the latest and most popular Ke Xuan stockings
+                </p></div>
+                </div>
+            <img src="static/about-1.jpg" class="img-responsive col-xs-6 pic">
+        </div>
+    <div class="about-2 about clearfix">
+        <img src="static/about-2.jpg" class="img-responsive col-xs-6">
+        <div class="col-xs-6 text clearfix">
+            <div class="text2">
+                <p class="a1">Focus</p>
+                <p class="a2">珂宣尼的历年,不在于做一种或者一类产品,而是以微商经济圈为出发点,以人为核心,研发富有创意,高质量产品,为用户带来极致的美的享受</p>
+                <p class="a3">
+                    KEEXUENNL products series are:Ke Xuan leather pants.<br>
+                    KEEXUENNL customized repair hair mask,as well as the latest and most popular Ke Xuan stockings
+                </p></div>
+        </div>
+    </div>
+        <div class="about-3 about clearfix">
+            <div class="clearfix col-xs-6 text">
+                <div class="text2">
+                <p class="a1">Present</p>
+                <p class="a2">现已有产品系列珂宣尼皮裤,珂宣尼奢养修护定制发膜以及珂宣尼丝袜。
+                未来我们将有更多产品上线,敬请期待</p>
+                <p class="a3">
+                    Now We have:<br>
+                    Leather pants,customized repair hair mask and stockings.<br>
+                    The future we still have more on the line,so stay tunned.
+                </p></div>
+        </div><img src="static/about-3.jpg" class="img-responsive col-xs-6">
+        </div>
+    </div>
+    <div class="founder clearfix" id="Founder">
+        <img class="founder" style="display: none" src="static/team-1.jpg">
+        <div class="col-xs-5 col-xs-offset-1 person"><p class="title">Founder</p><div class="team"><div class="p"><p class="introduce">Yiran Lee</p></div></div></div>
+        <script type="text/javascript">
+            var people = new Image();
+            $("img.founder").load(function () {
+                people.src = $("img.founder").attr("src");
+            var people_ratio = people.width/people.height;
+            $(".team").height($(".team").width()/people_ratio);
+            $(window).resize(function () {
+                $(".team").height($(".team").width()/people_ratio)
+            });
+            });
+             people.src = $("img.founder").attr("src");
+            var people_ratio = people.width/people.height;
+            $(".team").height($(".team").width()/people_ratio);
+            $(window).resize(function () {
+                $(".team").height($(".team").width()/people_ratio)
+            });
+        </script>
+        <div class="col-xs-5 say"><p class="title">Feedback</p><div class="feedback">
+            <div class="all"><p class="a1">Yiran Lee</p>
+        <p class="a2">"我开始以为生活的态度只有一种,工作的感觉也只有一中,但是慢慢成长后,发现原来生命中是有那么多色彩的,那么多的可能,没有限制,一切基于都在进行中"</p>
+        <p class="a3">KEEXUENNL products series are:Ke Xuan leather pants.<br>
+                    KEEXUENNL customized repair hair mask,as well as the latest and most popular Ke Xuan stockings</p>
+        </div>
+            </div></div>
+        <script type="text/javascript">
+            $("div.feedback").height($("div.team").height());
+            $(window).resize(function () {
+                $("div.feedback").height($("div.team").height());
+            });
+            $("img.founder").load(function () {
+               $("div.feedback").height($("div.team").height());
+            $(window).resize(function () {
+                $("div.feedback").height($("div.team").height());
+            })
+            })
+
+    </script>
+    </div>
+    <div class="Leather clearfix">
+        <p id="Leather">Leather Pants</p>
+        <img class="imgLeather" src="static/service-1.jpg" style="display: none">
+        <div class="img1 img">
+            <div class="text">
+            <p class="title">Materials</p>
+            <p class="chinese">产品精选法国进口皮料,以舒适时尚为最终目标</p>
+            <p class="french">exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate
+            velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident,sunt in culpa qui officia deserunt mollit anim id
+            est laborum.Ut enim ad minima veniam,quis nostrum?</p></div>
+        </div>
+        <div class="img2 img">
+            <div class="text">
+            <p class="title">Design</p>
+            <p class="chinese">设计师团队精心研发,不断创新,缔造时尚潮流</p>
+            <p class="french">exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate
+            velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident,sunt in culpa qui officia deserunt mollit anim id
+            est laborum.Ut enim ad minima veniam,quis nostrum?</p></div></div>
+        <div class="img3 img">
+            <div class="text">
+            <p class="title">Craft</p>
+            <p class="chinese">历经数道工序精心打磨,不放过一针一线,力臻完美</p>
+            <p class="french">exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate
+            velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident,sunt in culpa qui officia deserunt mollit anim id
+            est laborum.Ut enim ad minima veniam,quis nostrum?</p></div></div>
+        <div class="img4 img">
+            <div class="text">
+            <p class="title">Brand</p>
+            <p class="chinese">延续经典裁剪与工艺,坚持开拓创新,品质值得信赖</p>
+            <p class="french">exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate
+            velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident,sunt in culpa qui officia deserunt mollit anim id
+            est laborum.Ut enim ad minima veniam,quis nostrum?</p></div></div>
+    </div>
+    <script type="text/javascript">
+        var leather= new Image();
+        $("img.imgLeather").load(function () {
+            leather.src = $("img.imgLeather").attr("src");
+            var leather_radio = leather.width/leather.height;
+            $("div.img").height($("div.img").width()/leather_radio);
+            $(window).resize(function () {
+                $("div.img").height($("div.img").width()/leather_radio)
+            })
+        });
+         leather.src = $("img.imgLeather").attr("src");
+            var leather_radio = leather.width/leather.height;
+            $("div.img").height($("div.img").width()/leather_radio);
+        $(window).resize(function () {
+                $("div.img").height($("div.img").width()/leather_radio)
+            })
+    </script>
+    <div class="gallery">
+        <p id="Gallery">Gallery</p>
+        <div class="col-xs-2">
+            <img src="static/gallery-1.jpg" class="img-responsive g1">
+            <img src="static/gallery-2.3.7.9.14.15.19.jpg" class="img-responsive g8">
+            <img src="static/gallery-13.jpg" class="img-responsive g13">
+            <img src="static/gallery-2.3.7.9.14.15.19.jpg" class="img-responsive g20">
+        </div>
+        <div class="col-xs-2">
+            <img src="static/gallery-2.3.7.9.14.15.19.jpg" class="img-responsive g1">
+            <img src="static/gallery-8.jpg" class="img-responsive g8">
+            <img src="static/gallery-2.3.7.9.14.15.19.jpg" class="img-responsive g13">
+            <img src="static/gallery-20.jpg" class="img-responsive g20">
+        </div>
+        <div class="col-xs-2">
+            <img src="static/gallery-2.3.7.9.14.15.19.jpg" class="img-responsive g">
+            <img src="static/gallery-2.3.7.9.14.15.19.jpg" class="img-responsive g">
+            <img src="static/gallery-2.3.7.9.14.15.19.jpg" class="img-responsive g">
+            <img src="static/gallery-21.jpg" class="img-responsive g">
+        </div>
+        <div class="col-xs-2">
+            <img src="static/gallery-4.jpg" class="img-responsive g">
+            <img src="static/gallery-10.jpg" class="img-responsive g">
+            <img src="static/gallery-16.jpg" class="img-responsive g">
+            <img src="static/gallery-22.jpg" class="img-responsive g">
+        </div>
+        <div class="col-xs-2">
+            <img src="static/gallery-5.jpg" class="img-responsive g">
+            <img src="static/gallery-11.jpg" class="img-responsive g">
+            <img src="static/gallery-17.jpg" class="img-responsive g">
+            <img src="static/gallery-23.jpg" class="img-responsive g">
+        </div>
+        <div class="col-xs-2">
+            <img src="static/gallery-6.jpg" class="img-responsive g">
+            <img src="static/gallery-12.jpg" class="img-responsive g">
+            <img src="static/gallery-18.jpg" class="img-responsive g">
+            <img src="static/gallery-24.jpg" class="img-responsive g">
+        </div>
+
+    </div>
+    <div class="contact clearfix">
+        <p id="Contact">Contact</p>
+        <div class="col-xs-5 col-xs-offset-1 address">
+            <p class="a">If you have any questions or comments about KEEXUENNL,<br>
+            Please leave your contact information and we will contact you in the first time.
+            </p>
+            <p class="b">
+                Address
+            </p>
+            <p class="c">
+                上海市松江区<br>
+                锦昔路626号6楼605室 201620<br>
+                <br>
+                Room605,NO.626,JinXi Road,SongJiang District<br>
+                Shanghai,China<br>
+                201620
+            </p>
+
+        </div>
+        <form class="col-xs-5">
+            <input type="text" placeholder="Name" class="form-control">
+            <input type="text" placeholder="Email" class="form-control">
+            <input type="text" placeholder="Phone" class="form-control">
+            <textarea placeholder="Message" class="message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+</div>
+<footer>
+    <div class="clearfix">
+    <div class="col-xs-5 col-xs-offset-1 address">
+        <p class="title">Address</p>
+        <p class="detail">上海市松江区<br>
+        锦昔路626号6楼605室 201620<br>
+        <br></p>
+        <p class="en">Room605,NO.626,JinXi Road,SongJiang District<br>
+        Shanghai,China<br>
+        201620</p>
+
+    </div>
+    <div class="authorization col-xs-5">
+        <p class="title">Authorization Queries</p>
+        <form>
+            <input type="text" placeholder="代理商姓名/微信号">
+            <button type="submit">授权查询</button>
+        </form>
+
+
+    </div></div>
+    <div class="footer clearfix">
+        <ul>
+            <li><a href="#">Home</a>|</li>
+            <li><a href="#AboutUs">About</a>|</li>
+            <li><a href="#Founder">Team</a>|</li>
+            <li><a href="#Leather">Product</a>|</li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+        <p>
+            Copyright©广州溢然贸易有限公司.All RIGHT RESERVED 粤ICP备16007262号-1
+        </p>
+    </div>
+</footer>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+			</div>
+			<div class="modal-body">
+				<img class="modalimg img-responsive" src="">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+				</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
+</body>
+</html>
+
+<script src="static/bootstrap.min.js"></script>
+<script src="static/index.js"></script>
