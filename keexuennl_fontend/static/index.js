@@ -76,6 +76,7 @@ function check_size() {
             $(".contact form").css('margin-top','50px')
             $(".slide2").addClass("col-xs-12");
             $(".slide2").removeClass("col-xs-10 col-xs-offset-1");
+            $(".modal-dialog img").css("width", '300')
         }else {
             $(".slide2").removeClass("col-xs-12");
             $(".slide2").addClass("col-xs-10 col-xs-offset-1");
@@ -86,6 +87,7 @@ function check_size() {
             $(".contact .address").removeClass('col-xs-offset-2 col-xs-8')
             $(".contact .address").addClass('col-xs-offset-1 col-xs-5')
             $("p.french").css('display','block')
+            $(".modal-dialog img").css("width", '500')
         }
         if(window.innerWidth<=1117){
             $(".footer p").css({
