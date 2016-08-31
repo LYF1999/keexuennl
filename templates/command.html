@@ -1,22 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>授权</title>
-    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-</head>
-<body>
-<div class="content">
-    <img src="/static/command.jpg" class="img-responsive">
+{% extends 'base.html' %}
+{% block title %}授权{% endblock %}
+{% block header %}{% endblock %}
+{% block content %}
+    <link rel="stylesheet" href="/static/command.css">
+<div class="content" id="head">
+    <img src="/static/command.png" class="img-responsive">
     <form method="post">
+        {% csrf_token %}
         <input name="authorize" id="authorize">
         <input name="wechat" id="wechat">
-        <input name="phone", id="phone">
-        <input name="">
+        <input name="phone" id="phone">
+        <input name="date" id="date">
+        <input name="supervisor" id="supervisor">
+        <input name="auth_no" id="auth_no">
     </form>
 </div>
-</body>
-</html>
+    {% block footer %}{% endblock %}
+<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+{% endblock %}

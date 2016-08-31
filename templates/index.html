@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>首页</title>
+    <title>{% block title %}首页{% endblock %}</title>
 <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/index.css">
+    <link rel="stylesheet" href="/static/index.css">
 <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body>
+{% block header %}
 <header class="container-fluid" id="head">
     <div class="clearfix">
     <form method="get" class="form1" action="auth/">
     <input name="query1" type="text" placeholder="代理商姓名/微信号">
-        <img src="static/search2.png" class="search">
+        <img src="/static/search2.png" class="search">
     </form></div>
     <div class="logo col-xs-5">
         <ul class="hidden-xs hover-effect">
@@ -55,7 +56,8 @@
 	</div>
 </div> </div></div>
 
-</header>
+</header>{% endblock %}
+{% block content %}
 <div class="content">
     <div class="aboutus clearfix">
     <p id="AboutUs">About Us</p>
@@ -558,6 +560,37 @@
         </form>
     </div>
 
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+			</div>
+			<div class="modal-body">
+				<img class="modalimg img-responsive" src="">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+				</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
+<div class="error">
+	<img class="img-responsive" src="static/error.jpg">
+	<button type="button" class="">
+		<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+	</button>
+</div>
+</div>{% endblock %}
+{% block footer %}
+    <div class="error">
+	<img class="img-responsive" src="static/error.jpg">
+	<button type="button" class="">
+		<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+	</button>
 </div>
 <footer>
     <div class="clearfix">
@@ -591,33 +624,8 @@
         <p>
             Copyright©广州溢然贸易有限公司.All RIGHT RESERVED 粤ICP备16007262号-1
         </p>
-    </div>
-</footer>
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-					&times;
-				</button>
-			</div>
-			<div class="modal-body">
-				<img class="modalimg img-responsive" src="">
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">关闭
-				</button>
-			</div>
-		</div><!-- /.modal-content -->
-	</div><!-- /.modal -->
-</div>
-<img src="static/to-top.png" class="top">
-<div class="error">
-	<img class="img-responsive" src="static/error.jpg">
-	<button type="button" class="">
-		<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-	</button>
-</div>
+    </div><img src="/static/to-top.png" class="top">
+</footer>{% endblock %}
 </body>
 </html>
 

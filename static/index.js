@@ -58,7 +58,13 @@ $(function () {
     });
     $("footer button").click(function () {
         var value2 = $("input[name='query2']").val();
-        var htmlobj2 = $.ajax({url:"auth/?query="+value2,async:false});
+         $.get("/auth/",{query:value2}, function(ret){
+            if(ret!=0){
+               javascript:location.href='/auth/?query='+value
+            }else {
+                 $(".error").css("display", 'block')
+            }
+        })
     });
     check_size();
     $(".pic").load(function () {
