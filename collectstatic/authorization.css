@@ -4,36 +4,37 @@ body {
 
 .content {
   position: relative; }
-  .content form {
+  .content div.absolute {
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%; }
-    .content form input {
+    .content div.absolute p {
       font-size: 120%;
       position: absolute;
       color: #fff;
       height: 3%;
-      right: 17%; }
-    .content form input#authorize {
+      right: 17%;
+      text-align: center; }
+    .content div.absolute p#authorize {
       width: 18%;
       top: 36.5%;
       background-color: transparent;
       border: none;
       outline: none; }
-    .content form input#Wechat {
+    .content div.absolute p#Wechat {
       top: 42%;
       width: 34%;
       background-color: transparent;
       border: none;
       outline: none; }
-    .content form input#mobile {
+    .content div.absolute p#mobile {
       top: 48%;
       width: 28.3%;
       background-color: transparent;
       border: none;
       outline: none; }
-    .content form input#supervisor {
+    .content div.absolute p#supervisor {
       top: 53.1%;
       width: 19.8%;
       background-color: transparent;

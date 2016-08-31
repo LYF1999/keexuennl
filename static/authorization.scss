@@ -4,40 +4,41 @@ body{
 }
 .content{
   position: relative;
-  form{
+  div.absolute{
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
-    input{
+    p{
       font-size: 120%;
       position: absolute;
       color: #fff;
       height: 3%;
       right:17%;
+      text-align: center;
     }
-    input#authorize{
+    p#authorize{
       width: 18%;
       top:36.5%;
       background-color: transparent;
       border: none;
       outline: none;
     }
-    input#Wechat{
+    p#Wechat{
       top: 42%;
       width: 34%;
       background-color: transparent;
       border: none;
       outline: none;
     }
-    input#mobile{
+    p#mobile{
       top:48%;
       width:28.3%;
       background-color: transparent;
       border: none;
       outline: none;
     }
-    input#supervisor{
+    p#supervisor{
       top:53.1%;
       width:19.8%;
       background-color: transparent;

@@ -5,20 +5,43 @@ var a=1;
 var team = $(".team");
 var b=1;
 $(function () {
-        $("img.g1").click(function () {
+    $("#aAboutUs").click(function () {
+        $.scrollTo("#AboutUs",500);
+    });
+    $("#aFounder").click(function () {
+        $.scrollTo("#Founder",500);
+    })
+    $("#aLeather").click(function () {
+         $.scrollTo("#Leather",500);
+    })
+    $("#aGallery").click(function () {
+         $.scrollTo("#Gallery",1000);
+    })
+    $("#aContact").click(function () {
+        $.scrollTo("#Contact",1300);
+    })
+    $("img.top").click(function () {
+        $.scrollTo("#head", 2000)
+    })
+        $("a.g1").click(function () {
             showmodal("static/gallery-1-1.jpg")
+            return false
         });
-        $("img.g8").click(function () {
+        $("a.g8").click(function () {
             showmodal("static/gallery-8-1.jpg")
+            return false
         });
-        $("img.g13").click(function () {
+        $("a.g13").click(function () {
             showmodal("static/gallery-13-1.jpg")
+            return false
         });
-        $("img.g20").click(function () {
+        $("a.g20").click(function () {
             showmodal("static/gallery-20-1.jpg")
+            return false
         });
-        $("img.g").click(function () {
+        $("a.g").click(function () {
             showmodal("static/gallery.jpg")
+            return false
         });
     $("img.search").click(function () {
         $(".form1").submit()
@@ -102,7 +125,7 @@ function check_size() {
             $("footer ul").removeClass('clearfix')
             $(".footer p").css({
                 'float':'right',
-                'margin-right':'40px',
+                'margin-right':'120px',
                 'text-align':'left'
             })
         }
