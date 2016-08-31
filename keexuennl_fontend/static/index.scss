@@ -11,6 +11,10 @@ a{
 a:hover{
   background-color: grey;
 }
+body{
+  background-image: url("background.jpg");
+  background-size: 100% 100%;
+}
 p.a1{
   font-family: Arial;
   font-weight: bold;
@@ -47,14 +51,14 @@ p.a3{
 }
 header{
   height: 100%;
-  background-color: #000;
+
   padding-bottom: 50px;
   form{
     margin-top: 30px;
     margin-right: 50px;
     float: right;
     input{
-      background-color: #000;
+
       border-radius: 11px;
       border: 2px solid;
       outline: none;
@@ -117,7 +121,7 @@ header{
   }
 }
 .content{
-  background-color: #000;
+
   div.aboutus{
     padding-bottom: 80px;
     p#AboutUs{
@@ -380,7 +384,7 @@ header{
   }
 }
 footer{
-  background-color: #000;
+
   .clearfix{
     padding-bottom: 40px;
     p.title{
@@ -457,5 +461,10 @@ footer{
     display: block;
     margin: auto;
     width: 500px;
+  }
+}
+@media only screen and(max-width: 1000px) {
+  a{
+    width: 80px;
   }
 }
