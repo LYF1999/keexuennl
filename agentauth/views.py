@@ -5,10 +5,10 @@ from .models import Agent
 
 
 def index(request):
-    if 'wechat_no' not in request.GET and 'name' not in request.GET:
-        return Http404('para error')
-    if 'wechat_no' in request.GET:
-        agent = get_object_or_404(Agent, wechat_no=request.GET['wechat_no'])
+    if 'query' not in request.GET:
+        return Http404(request)
+    if Agent.objects.filter(wechat_no=request.GET['query']).exists():
+        agent = get_object_or_404(Agent, wechat_no=request.GET['query'])
     else:
-        agent = get_object_or_404(Agent, name=request.GET['name'])
-    return render(request, 'authorization.html')
+        agent = get_object_or_404(Agent, name=request.GET['query'])
+    return render(request, 'authorization.html', locals())

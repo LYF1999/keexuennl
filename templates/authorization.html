@@ -1,16 +1,17 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>授权</title>
-    <link rel="stylesheet" href="static/bootstrap.min.css">
-    <link rel="stylesheet" href="static/authorization.css">
- <script src="static/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'authorization.css' %}">
+    <script src="{% static 'jquery.min.js' %}"></script>
 </head>
 <body>
 <div class="content">
-<img src="static/background2.jpg" class="img-responsive">
+<img src="{% static 'background2.jpg' %}" class="img-responsive">
     <form>
         <input type="text" disabled="disabled" id="authorize" name="authorize" value="{{ agent.name }}">
         <input type="text" disabled="disabled" id="Wechat" name="wechat" value="{{ agent.wechat_no }}">
@@ -21,5 +22,5 @@
     <p class="line2">{{ agent.auth_no }}</p>
 </div>
 </body>
-<script src="static/bootstrap.min.js"></script>
+<script src="{% static 'bootstrap.min.js' %}"></script>
 </html>
