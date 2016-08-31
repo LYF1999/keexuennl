@@ -12,22 +12,24 @@ def command(request):
         authorize = request.POST.get('authorize')
         wechat = request.POST.get('wechat')
         mobile_phone = request.POST.get('phone')
+        date = request.POST.get('date')
         supervisor = request.POST.get('supervisor')
         auth_no = request.POST.get('auth_no')
-        errors = check(authorize=authorize, phone=mobile_phone, wechat=wechat, supervisor=supervisor, auth_no=auth_no)
+        errors = check(authorize=authorize, phone=mobile_phone, wechat=wechat, supervisor=supervisor, auth_no=auth_no, date=date)
         if errors:
             Agent.objects.create(name=authorize,
                                  wechat_no=wechat,
                                  mobile_phone=mobile_phone,
                                  supervisor=supervisor,
-                                 date=timezone.now()
+                                 date=date,
+                                 auth_no=auth_no
                                  )
         return render(request, 'command.html', {
             'errors': errors,
         })
 
 
-def check(authorize, wechat, phone, supervisor, auth_no):
+def check(authorize, wechat, phone, supervisor, auth_no, date):
     errors = {}
     if not authorize:
         errors.setdefault('authorize_error', u'兹授权为空,请填写')
@@ -45,4 +47,6 @@ def check(authorize, wechat, phone, supervisor, auth_no):
         errors.setdefault('phone_error', u'手机号为空, 请填写')
     if not supervisor:
         errors.setdefault('supervisor_error', u'上级名称为空请填写')
+    if not date:
+        errors.setdefault('date_error', u'日期为空, 请填写')
     return errors
