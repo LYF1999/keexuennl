@@ -104,7 +104,6 @@ header{
         color:$yellow;
         font-size: 14px;
         }
-
       }
     }
     p{
@@ -782,39 +781,53 @@ a:hover { text-decoration:none}
 	right: 100%;
 	content: '';
 	z-index: -1;
-	opacity: 0;
+	opacity: 1;
 	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
+-webkit-transform-style: preserve-3d;
+-webkit-backface-visibility: hidden;
 }
 .hover-effect li:before {
 	-webkit-transition-delay: 0s;
 	transition-delay: 0s;
+-webkit-transform-style: preserve-3d;
+-webkit-backface-visibility: hidden;
 }
 
 .hover-effect li:after {
 	-webkit-transition-delay: 0.1s;
 	transition-delay: 0.1s;
+-webkit-transform-style: preserve-3d;
+-webkit-backface-visibility: hidden;
 }
 
 .hover-effect a:before {
 	-webkit-transition-delay: 0.05s;
 	transition-delay: 0.05s;
+-webkit-transform-style: preserve-3d;
+-webkit-backface-visibility: hidden;
 }
 
 .hover-effect a:after {
 	-webkit-transition-delay: 0.15s;
 	transition-delay: 0.15s;
+-webkit-transform-style: preserve-3d;
+-webkit-backface-visibility: hidden;
 }
 
 .hover-effect li:hover:before, .hover-effect li.current:before, .hover-effect li:hover:after, .hover-effect li.current:after, .hover-effect li:hover a:before, .hover-effect li.current a:before, .hover-effect li:hover a:after, .hover-effect li.current a:after {
   left: 0;
   right: 0;
   opacity: 1;
+-webkit-transform-style: preserve-3d;
+-webkit-backface-visibility: hidden;
 }
 
 .hover-effect li:hover:before, .hover-effect li.current:before {
 	-webkit-transition-delay: 0s;
 	transition-delay: 0s;
+-webkit-transform-style: preserve-3d;
+-webkit-backface-visibility: hidden;
 	/*--w3layouts--*/
 	/*--agileits--*/
 }
@@ -822,14 +835,50 @@ a:hover { text-decoration:none}
 .hover-effect li:hover:after, .hover-effect li.current:after {
 	-webkit-transition-delay: 0.2s;
 	transition-delay: 0.2s;
+-webkit-transform-style: preserve-3d;
+-webkit-backface-visibility: hidden;
 }
 
 .hover-effect li:hover a:before, .hover-effect li.current a:before {
 	-webkit-transition-delay: 0.1s;
 	transition-delay: 0.1s;
+-webkit-transform-style: preserve-3d;
+-webkit-backface-visibility: hidden;
 }
 
 .hover-effect li:hover a:after, .hover-effect li.current a:after {
 	-webkit-transition-delay: 0.3s;
 	transition-delay: 0.3s;
+-webkit-transform-style: preserve-3d;
+-webkit-backface-visibility: hidden;
+}
+.error{
+  display: none;
+  position: fixed;
+  top: 30%;
+  width: 70%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin: auto;
+  button{
+    position: absolute;
+    right: 0;
+    top:0;
+    border: none;
+    background-color: transparent;
+    span{
+      display: block;
+      color: #fff;
+    }
+  }
+  button:hover{
+    background-color: transparent;
+  }
+  button:active{
+    background-color: transparent;
+  }
+  span:active{
+    background-color: transparent;
+  }
+
 }

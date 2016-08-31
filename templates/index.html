@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>首页</title>
-<link rel="stylesheet" href="static/bootstrap.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/index.css">
- <script src="static/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body>
 <header class="container-fluid" id="head">
     <div class="clearfix">
     <form method="get" class="form1" action="auth/">
-    <input  type="text" placeholder="代理商姓名/微信号">
+    <input name="query1" type="text" placeholder="代理商姓名/微信号">
         <img src="static/search2.png" class="search">
     </form></div>
     <div class="logo col-xs-5">
@@ -88,11 +88,11 @@
             <div class="clearfix col-xs-6 text">
                 <div class="text2">
                 <p class="a1">Present</p>
-                <p class="a2">现已有产品系列:<br>珂宣尼皮裤,珂宣尼奢养修护定制发膜以及珂宣尼丝袜。
+                <p class="a2">主推产品:<br>珂宣尼皮裤,
                 未来我们将有更多产品上线,敬请期待</p>
                 <p class="a3">
-                    Now We have:<br>
-                    Leather pants,customized repair hair mask and stockings.<br>
+                    Our featured products:<br>
+                    Keexuennl Leather pant.<br>
                     The future we still have more on the line,so stay tunned.
                 </p></div>
         </div><img src="static/about-3.jpg" class="img-responsive col-xs-6">
@@ -574,8 +574,8 @@
     <div class="authorization col-xs-5">
         <p class="title">Authorization Queries</p>
         <form method="get" action="auth/">
-            <input type="text" placeholder="代理商姓名/微信号">
-            <button type="submit">授权查询</button>
+            <input type="text" name="query2" placeholder="代理商姓名/微信号">
+            <button type="button">授权查询</button>
         </form>
 
 
@@ -612,9 +612,15 @@
 	</div><!-- /.modal -->
 </div>
 <img src="static/to-top.png" class="top">
+<div class="error">
+	<img class="img-responsive" src="static/error.jpg">
+	<button type="button" class="">
+		<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+	</button>
+</div>
 </body>
 </html>
 
-<script src="static/bootstrap.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="//cdn.bootcss.com/jquery-scrollTo/2.1.2/jquery.scrollTo.js"></script>
 <script src="static/index.js"></script>

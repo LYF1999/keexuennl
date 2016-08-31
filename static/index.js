@@ -5,6 +5,9 @@ var a=1;
 var team = $(".team");
 var b=1;
 $(function () {
+    $(".error button").click(function () {
+         $(".error").css("display", 'none')
+    })
     $("#aAboutUs").click(function () {
         $.scrollTo("#AboutUs",500);
     });
@@ -44,7 +47,18 @@ $(function () {
             return false
         });
     $("img.search").click(function () {
-        $(".form1").submit()
+        var value = $("input[name='query1']").val();
+        $.get("/auth/",{query:value}, function(ret){
+            if(ret!=0){
+               javascript:location.href='/auth/?query='+value
+            }else {
+                 $(".error").css("display", 'block')
+            }
+        })
+    });
+    $("footer button").click(function () {
+        var value2 = $("input[name='query2']").val();
+        var htmlobj2 = $.ajax({url:"auth/?query="+value2,async:false});
     });
     check_size();
     $(".pic").load(function () {
