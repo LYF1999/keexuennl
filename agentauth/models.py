@@ -10,4 +10,4 @@ class Agent(models.Model):
     mobile_phone = models.CharField('手机号', max_length=255)
     supervisor = models.CharField('上级名称', max_length=255)
     date = models.DateField('授权日期', null=True)
-    auth_no = models.CharField('授权号码', max_length=255)
+    auth_no = models.CharField('授权号码', max_length=255, unique=True)
