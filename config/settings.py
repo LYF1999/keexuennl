@@ -79,8 +79,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'keexuennl',
         'HOST': '127.0.0.1',
-        'USER': 'keexuennl',
-        'PASSWORD': 'keexuennl',
+        'USER': 'root',
+        'PASSWORD': 'yiqifeiyang',
     }
 }
 
@@ -107,7 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
-LANGUAGE_CODE = 'en'
+LANGUAGE_CODE = 'zh_hans'
 
 TIME_ZONE = 'Asia/Shanghai'
 

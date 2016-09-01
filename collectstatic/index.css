@@ -1,3 +1,4 @@
+@charset "UTF-8";
 a {
   transition: 0.5s all;
   -webkit-transition: 0.5s all;
@@ -8,7 +9,8 @@ a {
 body {
   position: relative;
   background-image: url("background.jpg");
-  background-size: 100% 100%; }
+  background-size: 100% 100%;
+  font-family: 微软雅黑; }
 
 p.a1, .content div.founder .feedback p.a1 {
   font-family: Arial;
@@ -136,7 +138,7 @@ header {
   padding-bottom: 80px; }
   .content div.founder p.title {
     background-color: transparent;
-    margin-bottom: 0;
+    margin-bottom: 60px;
     color: #dec573; }
   .content div.founder .person {
     position: relative; }
@@ -146,7 +148,7 @@ header {
       font-family: "Century Gothic";
       font-size: 54px;
       position: absolute;
-      top: 80px;
+      top: 140px;
       left: 50%;
       transform: translate(-50%);
       margin: auto;
@@ -187,7 +189,7 @@ header {
 .content div.Leather {
   width: 100%; }
   .content div.Leather p {
-    margin-bottom: 50px; }
+    margin-bottom: 60px; }
   .content div.Leather p.title {
     font-family: "Century Gothic";
     font-size: 30px; }
@@ -228,6 +230,8 @@ header {
 .content div.gallery {
   /*--w3layouts--*/
   /*--agileits--*/ }
+  .content div.gallery p {
+    margin-bottom: 60px; }
   .content div.gallery .gal-left {
     padding: 0; }
   .content div.gallery .img-box, .content div.gallery .info-box {
@@ -462,6 +466,8 @@ header {
     padding: 7px 7px; }
 .content div.contact {
   padding-bottom: 80px; }
+  .content div.contact p {
+    margin-bottom: 60px; }
   .content div.contact .address {
     background-color: #a3a3a3;
     min-height: 342px; }
@@ -471,14 +477,17 @@ header {
     .content div.contact .address p.a {
       font-family: Arial;
       margin-top: 20px;
-      font-size: 14px; }
+      font-size: 14px;
+      margin-bottom: 40px; }
     .content div.contact .address p.b {
       font-family: "Century Gothic";
-      margin-top: 40px;
-      font-size: 21px; }
+      margin-top: 25px;
+      font-size: 21px;
+      margin-bottom: 30px; }
     .content div.contact .address p.c {
-      margin-top: 40px;
-      font-size: 14px; }
+      margin-top: 25px;
+      font-size: 14px;
+      margin-bottom: 30px; }
   .content div.contact form input {
     width: 100%;
     background-color: #9b9b9b;
@@ -590,7 +599,7 @@ footer .footer li {
   width: 500px; }
 
 img.top {
-  position: absolute;
+  position: fixed;
   right: 20px;
   bottom: 20px;
   cursor: pointer; }
@@ -695,28 +704,34 @@ a:hover {
   -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: hidden; }
 
-.error {
+.error2 {
   display: none;
   position: fixed;
-  top: 30%;
-  width: 70%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  margin: auto; }
-  .error button {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8); }
+  .error2 .img-e {
+    width: 70%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+  .error2 button {
     position: absolute;
     right: 0;
     top: 0;
     border: none;
     background-color: transparent; }
-    .error button span {
+    .error2 button span {
       display: block;
       color: #fff; }
-  .error button:hover {
+  .error2 button:hover {
     background-color: transparent; }
-  .error button:active {
+  .error2 button:active {
     background-color: transparent; }
-  .error span:active {
+  .error2 span:active {
     background-color: transparent; }
 
 /*# sourceMappingURL=index.css.map */
