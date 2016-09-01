@@ -6,6 +6,7 @@ from django.http import JsonResponse, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import reverse
 import django.contrib.auth as auth
+import re
 
 
 @login_required
@@ -16,7 +17,7 @@ def command(request):
             'form': form
         })
     else:
-        errors = {}
+        errors = {'error1': '', 'error2': '', 'error3': '', 'error4': '', 'error5': '', 'error6': ''}
         name = request.POST.get('name')
         wechat_no = request.POST.get('wechat_no')
         mobile_phone = request.POST.get('mobile_phone')
@@ -24,23 +25,25 @@ def command(request):
         date = request.POST.get('date')
         auth_no = request.POST.get('auth_no')
         if not name:
-            errors.setdefault('error1', "＊ 未填写")
+            errors['error1'] = '＊ 未填写'
         if not wechat_no:
-            errors.setdefault('error2', "＊ 未填写")
+            errors['error2'] = '＊ 未填写'
         if not mobile_phone:
-            errors.setdefault('error3', "＊ 未填写")
+            errors['error3'] = '＊ 未填写'
         if not supervisor:
-            errors.setdefault('error4', "＊ 未填写")
+            errors['error4'] = '＊ 未填写'
         if not date:
-            errors.setdefault('error5', "＊ 未填写")
+            errors['error5'] = '＊ 未填写'
         if not auth_no:
-            errors.setdefault('error6', "＊ 未填写")
+            errors['error6'] = '＊ 未填写'
+        if not re.match(u'^\d{4}-[0-1][0-9]-[0-3][0-9]$', date):
+            errors['error5'] = '＊ 格式错误'
         if Agent.objects.filter(wechat_no=request.POST.get('wechat_no')).exists():
-            errors.setdefault('error2', "＊ 已存在")
+            errors['error2'] = '＊ 已存在'
         if Agent.objects.filter(mobile_phone=request.POST.get('mobile_phone')).exists():
-            errors.setdefault('error3', "＊ 已存在")
+            errors['error3'] = '＊ 已存在'
         if Agent.objects.filter(auth_no=request.POST.get('auth_no')).exists():
-            errors.setdefault('error6', "＊ 已存在")
+            errors['error6'] = '＊ 已存在'
         if errors:
             return JsonResponse({
                 'result': False,
