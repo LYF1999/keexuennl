@@ -7,12 +7,7 @@
     <img src="/static/command.png" class="img-responsive">
     <form method="post">
         {% csrf_token %}
-        <input name="authorize" id="authorize">
-        <input name="wechat" id="wechat">
-        <input name="phone" id="phone">
-        <input name="date" id="date">
-        <input name="supervisor" id="supervisor">
-        <input name="auth_no" id="auth_no">
+        {{ form }}
     </form>
 </div>
     {% block footer %}{% endblock %}

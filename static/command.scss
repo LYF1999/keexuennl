@@ -8,6 +8,9 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
+    label{
+      display: none;
+    }
   input{
     position: absolute;
     left: 50.5%;
@@ -18,27 +21,27 @@ body {
     background-color: transparent;
     color: #fff;
   }
-  input#authorize{
+  input#id_name{
     top:48.4%;
 
   }
-  input#wechat{
+  input#id_wechat_no{
     top:54.6%;
 
   }
-  input#phone{
+  input#id_mobile_phone{
     top:61.9%
 
   }
-  input#date{
+  input#id_date{
     top:68.9%
 
   }
-  input#supervisor{
+  input#id_supervisor{
     top:75.7%
 
   }
-  input#auth_no{
+  input#id_auth_no{
     top:82.3%
 
   }
