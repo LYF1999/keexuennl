@@ -5,6 +5,7 @@ var a=1;
 var team = $(".team");
 var b=1;
 $(function () {
+    $(".content .aboutus").css('margin-top',window.innerHeight-$("header").height())
     $(".error2 button").click(function () {
          $(".error2").css("display", 'none')
     })
@@ -104,12 +105,16 @@ function cyclic() {
             $("div.founder p.introduce").text('Yiran Lee');
             $("div.founder p.a1").text('Yiran Lee');
             $("div.founder p.a2").text('我开始以为生活的态度只有一种,工作的感觉也只有一中,但是慢慢成长后,发现原来生命中是有那么多色彩的,那么多的可能,没有限制,一切基于都在进行中')
+            $("div.founder p.a3").text('"I used to thought we can just only have one attitude towards our life,work is also one feeling.but as we grow older.We found that'+
+                'there are so many colors and so many possibilities in our life.There is no limit,all opportunities are processig."');
          team.css("background-image", 'url("static/team-1.jpg")');
     }
     else {
             $("div.founder p.introduce").text('Fiona Chan');
             $("div.founder p.a1").text('Fiona Chan');
-            $("div.founder p.a2").text('那么久的国外生活,游历了200多个国家,不敢说活透了人生,但是觉得原来一切的变化与不同我们都是可以接受和理解的。人生百态,活法不只有一中,我只是选择我喜爱的那个方向前进着。')
+            $("div.founder p.a2").text('那么久的国外生活,游历了40多个国家,不敢说活透了人生,但是觉得原来一切的变化与不同我们都是可以接受和理解的。人生百态,活法不只有一中,我只是选择我喜爱的那个方向前进着。')
+            $("div.founder p.a3").text('"Living abroad for a long time,traveled to more than 40 countries.Does not dare to speak comprehend everything,but knowing that the all different we met before should beacceptabled and understandabled.The vicissitudes of life,"'+
+            'life style is not only have one way,so I choose my favorite direction to go forward.')
         team.css("background-image", 'url("static/team-2.jpg")');
     }
         cyclic()
@@ -126,7 +131,7 @@ function lunbo() {
 function check_size() {
     $(".text").height($(".pic").height())
         if(window.innerWidth<=600){
-            $("p.french").css('display','none')
+
             $(".contact .col-xs-offset-1").addClass('col-xs-offset-2 col-xs-8')
             $(".contact .col-xs-offset-1").css('min-height', '0')
             $(".contact .col-xs-offset-1").removeClass('col-xs-offset-1 col-xs-5')
@@ -145,7 +150,6 @@ function check_size() {
             $(".contact form").removeClass('col-xs-8 col-xs-offset-2')
             $(".contact .address").removeClass('col-xs-offset-2 col-xs-8')
             $(".contact .address").addClass('col-xs-offset-1 col-xs-5')
-            $("p.french").css('display','block')
             $(".modal-dialog img").css("width", '500')
         }
         if(window.innerWidth<=1117){
@@ -215,12 +219,13 @@ function check_size() {
             })
 
         }
-        if(window.innerWidth<=811){
+        if(window.innerWidth<=966){
             $(".founder .person").removeClass('col-xs-5 col-xs-offset-1')
             $(".founder .person").addClass('col-xs-8 col-xs-offset-2')
             $(".founder .col-xs-5").addClass('col-xs-8 col-xs-offset-2')
             $(".founder .col-xs-5").removeClass('col-xs-5');
             $(".team").height($(".team").width()/people_ratio)
+            $("p.s2").css('margin-top','50px')
         }else{
             $(".founder .person").addClass('col-xs-5 col-xs-offset-1')
             $(".founder .person").removeClass('col-xs-8 col-xs-offset-2')
@@ -228,6 +233,7 @@ function check_size() {
             $(".founder .say").addClass('col-xs-5');
             $(".team").height($(".team").width()/people_ratio)
             $(".feedback").height($(".team").height());
+            $("p.s2").css('margin-top','0')
         }
         if(window.innerWidth<=767){
             $(".text").removeClass('col-xs-6');
@@ -247,6 +253,14 @@ function check_size() {
             })
         }
         else{
+            $(".text2").css({
+                'position':'absolute',
+                'height':'auto',
+                'top':'50%',
+                'transform':'translate(0,-50%)',
+                'margin-top':'0',
+                'margin-bottom':'30px'
+            });
             $(".text").addClass('col-xs-6');
             $(".text").removeClass('col-xs-10 col-xs-offset-1');
             $(".about").css('min-width', '735px');
