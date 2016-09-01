@@ -852,14 +852,21 @@ a:hover { text-decoration:none}
 -webkit-transform-style: preserve-3d;
 -webkit-backface-visibility: hidden;
 }
-.error{
+.error2{
   display: none;
   position: fixed;
-  top: 30%;
-  width: 70%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,.8);
+  .img-e{
+    width: 70%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
   button{
     position: absolute;
     right: 0;

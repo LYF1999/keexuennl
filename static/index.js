@@ -5,8 +5,8 @@ var a=1;
 var team = $(".team");
 var b=1;
 $(function () {
-    $(".error button").click(function () {
-         $(".error").css("display", 'none')
+    $(".error2 button").click(function () {
+         $(".error2").css("display", 'none')
     })
     $(".aAboutUs").click(function () {
         $.scrollTo("#AboutUs",500);
@@ -64,7 +64,7 @@ $(function () {
         var value = $("input[name='query1']").val();
        $.getJSON("/auth/api/?query="+value, function(ret){
             if(!ret.result){
-               $(".error").css("display", 'block')
+               $(".error2").css("display", 'block')
             }else {
                 location.href='/auth/?query='+value
             }
@@ -75,7 +75,7 @@ $(function () {
         var value2 = $("input[name='query2']").val();
          $.getJSON("/auth/api/?query="+value2, function(ret){
             if(!ret.result){
-               $(".error").css("display", 'block')
+               $(".error2").css("display", 'block')
             }else {
                 location.href='/auth/?query='+value
             }

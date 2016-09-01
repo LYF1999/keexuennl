@@ -6,15 +6,58 @@
     <link rel="stylesheet" href="/static/bootstrap-datetimepicker.min.css">
 <div class="content" id="head">
     <img src="/static/command.png" class="img-responsive">
-    <form method="post">
+    <form method="post" id="form1">
         {% csrf_token %}
-        {{ form }}
+        {{ form.name }}
+        {{ form.wechat_no }}
+        {{ form.mobile_phone }}
+        {{ form.supervisor }}
+        {{ form.date }}
+        {{ form.auth_no }}
+        <button class="submit" type="submit"></button>
+        <button class="close" type="button"></button>
+        <p class="error1 errors"></p>
+        <p class="error2 errors">{{ errors.error2 }}</p>
+        <p class="error3 errors">{{ errors.error3 }}</p>
+        <p class="error4 errors"></p>
+        <p class="error5 errors"></p>
+        <p class="error6 errors">{{ errors.error6 }}</p>
     </form>
 </div>
     {% block footer %}{% endblock %}
+<div class="success">
+<div class="over">
+    <div class="light">
+        <h2>添加成功</h2>
+        <button class="success">确定</button>
+    </div>
+</div>
+</div>
     <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="/static/bootstrap-datetimepicker.min.js"></script>
     <script type="text/javascript">
+    $("#form1").submit(function () {
+        $.post("/command/",
+                {   mobile_phone:$("#id_mobile_phone").val(),
+                    csrfmiddlewaretoken:$("input[type='hidden']").val(),
+                    name:$("#id_name").val(),
+                    wechat_no:$("#id_wechat_no").val(),
+                    supervisor:$("#id_supervisor").val(),
+                    date:$("#id_date").val(),
+                    auth_no:$("#id_auth_no").val()
+                },
+                function(data,status){
+                    if (data.result){
+                        $(".over").css('display', 'block')
+                    }
+                    else {
+                        $(".error2").text(data.errors.error2);
+                        $(".error3").text(data.errors.error3);
+                        $(".error6").text(data.errors.error6)
+                    }
+                });
+        return false
+    });
     $('#id_date').datetimepicker({
     format: 'yyyy-mm-dd',
         weekStart: 1,
@@ -24,9 +67,14 @@
 		startView: 2,
 		minView: 2,
 		forceParse: 0
-
-
    });
+    $("button.close").click(function () {
+        location.href = "/"
+    })
+    $(".success").click(function () {
+        $(".over").css('display','none')
+        $("input:not([type='hidden'])").val("")
+    })
     </script>
 
 {% endblock %}

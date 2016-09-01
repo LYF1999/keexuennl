@@ -16,31 +16,110 @@ body {
     left: 50.5%;
     width: 35%;
     border: none;
-    height: 3.2%;
+    height: 2.8%;
     outline: none;
     background-color: transparent;
     color: #fff;
   }
   input#id_name{
-    top:48.4%;
+    top:40.8%;
 
   }
   input#id_wechat_no{
-    top:54.6%;
+    top:45.8%;
 
   }
   input#id_mobile_phone{
-    top:61.9%
+    top:51.6%
   }
   input#id_date{
-    top:75.7%
+    top:63%
   }
   input#id_supervisor{
-    top:68.9%
+    top:57.4%
   }
   input#id_auth_no{
-    top:82.3%
+    top:68.4%
 
   }
+    button{
+      position: absolute;
+      width: 15%;
+      bottom: 9.8%;
+      height: 5.5%;
+      background-color: transparent;
+      border: none;
+    }
+    button.submit{
+      left: 27%;
+    }
+    button.close{
+      right: 27%;
+    }
+    .errors{
+      position: absolute;
+      top: 0;
+      width: 12%;
+      left: 86.5%;
+      height: 2.3%;
+      background-color: transparent;
+      line-height: 30px;
+      color: #ff921e;
+    }
+    .error1{
+      top:43.6%;
+    }
+    .error2{
+      top:45.8%;
+      height: 2.8%;
+    }
+    .error3{
+      top:51.6%;
+      height:2.8%;
+    }
+    .error4{
+      top:60.2%;
+      height: 2.8%;
+    }
+    .error5{
+      top:65.8%;
+      height: 2.5%;
+    }
+    .error6{
+      top:68.4%;
+      height: 2.5%;
+    }
+
 }
+
+}
+.over{
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,.8);
+}
+.light{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 1;
+  h2{
+    color: #fff;
+    text-align: center;
+    margin-bottom: 120px;
+  }
+  button{
+    background-color: transparent;
+    border-radius: 3px;
+    border:solid #d5be73 1px;
+    color: #fff;
+    display: block;
+    width: 60px;
+    margin: auto;
+  }
 }
