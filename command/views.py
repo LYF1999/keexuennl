@@ -14,7 +14,6 @@ def command(request):
         })
     else:
         errors={}
-        print request.POST
         name = request.POST.get('name')
         wechat_no = request.POST.get('wechat_no')
         mobile_phone = request.POST.get('mobile_phone')
