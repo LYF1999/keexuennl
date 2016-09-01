@@ -228,6 +228,7 @@ header {
     -ms-tranform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%); }
 .content div.gallery {
+  margin-top: 40px;
   /*--w3layouts--*/
   /*--agileits--*/ }
   .content div.gallery p {
@@ -465,6 +466,7 @@ header {
   .content div.gallery .content-grid-effect {
     padding: 7px 7px; }
 .content div.contact {
+  margin-top: 40px;
   padding-bottom: 80px; }
   .content div.contact p {
     margin-bottom: 60px; }
