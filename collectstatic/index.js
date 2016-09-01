@@ -5,6 +5,10 @@ var a=1;
 var team = $(".team");
 var b=1;
 $(function () {
+    $(".error").css("display", 'none');
+    $(".error button").click(function () {
+         $(".error").css("display", 'none')
+    })
     $("#aAboutUs").click(function () {
         $.scrollTo("#AboutUs",500);
     });
@@ -44,7 +48,13 @@ $(function () {
             return false
         });
     $("img.search").click(function () {
-        $(".form1").submit()
+        var value = $("input[name='query1']");
+        alert(value)
+        var htmlobj1 = $.ajax({url:"/auth/?query="+value,async:false});
+    });
+    $("footer button").click(function () {
+        var value2 = $("input[name='query2']");
+        var htmlobj2 = $.ajax({url:"/auth/?query="+value2,async:false});
     });
     check_size();
     $(".pic").load(function () {

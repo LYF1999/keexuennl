@@ -5,22 +5,33 @@ var a=1;
 var team = $(".team");
 var b=1;
 $(function () {
-    $("#aAboutUs").click(function () {
+    $(".error2 button").click(function () {
+         $(".error2").css("display", 'none')
+    })
+    $(".aAboutUs").click(function () {
         $.scrollTo("#AboutUs",500);
     });
-    $("#aFounder").click(function () {
+    $(".aFounder").click(function () {
         $.scrollTo("#Founder",500);
     })
-    $("#aLeather").click(function () {
+    $(".aLeather").click(function () {
          $.scrollTo("#Leather",500);
     })
-    $("#aGallery").click(function () {
+    $(".aGallery").click(function () {
          $.scrollTo("#Gallery",1000);
     })
-    $("#aContact").click(function () {
+    $(".aContact").click(function () {
         $.scrollTo("#Contact",1300);
+        return false
+    })
+    $(".aContact2").click(function () {
+        $.scrollTo("#Contact",200);
+        return false
     })
     $("img.top").click(function () {
+        $.scrollTo("#head", 2000)
+    })
+    $(".ahead").click(function () {
         $.scrollTo("#head", 2000)
     })
         $("a.g1").click(function () {
@@ -44,7 +55,32 @@ $(function () {
             return false
         });
     $("img.search").click(function () {
-        $(".form1").submit()
+        $('.form1').submit()
+    });
+    $("footer button").click(function () {
+        $('.form2').submit()
+    });
+    $(".form1").submit(function () {
+        var value = $("input[name='query1']").val();
+       $.getJSON("/auth/api/?query="+value, function(ret){
+            if(!ret.result){
+               $(".error2").css("display", 'block')
+            }else {
+                location.href='/auth/?query='+value
+            }
+        });
+        return false;
+    });
+    $(".form2").submit(function () {
+        var value2 = $("input[name='query2']").val();
+         $.getJSON("/auth/api/?query="+value2, function(ret){
+            if(!ret.result){
+               $(".error2").css("display", 'block')
+            }else {
+                location.href='/auth/?query='+value
+            }
+        });
+        return false
     });
     check_size();
     $(".pic").load(function () {

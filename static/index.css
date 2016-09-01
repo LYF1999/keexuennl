@@ -590,7 +590,7 @@ footer .footer li {
   width: 500px; }
 
 img.top {
-  position: absolute;
+  position: fixed;
   right: 20px;
   bottom: 20px;
   cursor: pointer; }
@@ -632,47 +632,97 @@ a:hover {
   right: 100%;
   content: '';
   z-index: -1;
-  opacity: 0;
+  opacity: 1;
   -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
+  transition: all 0.3s ease;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden; }
 
 .hover-effect li:before {
   -webkit-transition-delay: 0s;
-  transition-delay: 0s; }
+  transition-delay: 0s;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden; }
 
 .hover-effect li:after {
   -webkit-transition-delay: 0.1s;
-  transition-delay: 0.1s; }
+  transition-delay: 0.1s;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden; }
 
 .hover-effect a:before {
   -webkit-transition-delay: 0.05s;
-  transition-delay: 0.05s; }
+  transition-delay: 0.05s;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden; }
 
 .hover-effect a:after {
   -webkit-transition-delay: 0.15s;
-  transition-delay: 0.15s; }
+  transition-delay: 0.15s;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden; }
 
 .hover-effect li:hover:before, .hover-effect li.current:before, .hover-effect li:hover:after, .hover-effect li.current:after, .hover-effect li:hover a:before, .hover-effect li.current a:before, .hover-effect li:hover a:after, .hover-effect li.current a:after {
   left: 0;
   right: 0;
-  opacity: 1; }
+  opacity: 1;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden; }
 
 .hover-effect li:hover:before, .hover-effect li.current:before {
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
   /*--w3layouts--*/
   /*--agileits--*/ }
 
 .hover-effect li:hover:after, .hover-effect li.current:after {
   -webkit-transition-delay: 0.2s;
-  transition-delay: 0.2s; }
+  transition-delay: 0.2s;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden; }
 
 .hover-effect li:hover a:before, .hover-effect li.current a:before {
   -webkit-transition-delay: 0.1s;
-  transition-delay: 0.1s; }
+  transition-delay: 0.1s;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden; }
 
 .hover-effect li:hover a:after, .hover-effect li.current a:after {
   -webkit-transition-delay: 0.3s;
-  transition-delay: 0.3s; }
+  transition-delay: 0.3s;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden; }
+
+.error2 {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8); }
+  .error2 .img-e {
+    width: 70%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+  .error2 button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    background-color: transparent; }
+    .error2 button span {
+      display: block;
+      color: #fff; }
+  .error2 button:hover {
+    background-color: transparent; }
+  .error2 button:active {
+    background-color: transparent; }
+  .error2 span:active {
+    background-color: transparent; }
 
 /*# sourceMappingURL=index.css.map */
