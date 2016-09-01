@@ -1,7 +1,6 @@
-# coding=utf-8
+# coding: utf-8
 from django.shortcuts import render
 from agentauth.models import Agent
-from django.utils import timezone
 from .forms import Authorize
 from django.http import JsonResponse
 
@@ -13,8 +12,7 @@ def command(request):
             'form': form
         })
     else:
-        errors={}
-        print request.POST
+        errors = {}
         name = request.POST.get('name')
         wechat_no = request.POST.get('wechat_no')
         mobile_phone = request.POST.get('mobile_phone')

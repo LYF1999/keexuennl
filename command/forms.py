@@ -22,6 +22,7 @@ class Authorize(forms.ModelForm):
     auth_no = forms.CharField(widget=forms.TextInput({
         'autocomplete': 'off'
     }))
+
     class Meta:
         model = Agent
         fields = ('name', 'wechat_no', 'mobile_phone', 'supervisor', 'date', 'auth_no')
