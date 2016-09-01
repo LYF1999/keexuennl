@@ -3,6 +3,7 @@
 {% block header %}{% endblock %}
 {% block content %}
     <link rel="stylesheet" href="/static/command.css">
+    <link rel="stylesheet" href="/static/bootstrap-datetimepicker.min.css">
 <div class="content" id="head">
     <img src="/static/command.png" class="img-responsive">
     <form method="post">
@@ -11,5 +12,21 @@
     </form>
 </div>
     {% block footer %}{% endblock %}
-<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="/static/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript">
+    $('#id_date').datetimepicker({
+    format: 'yyyy-mm-dd',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+
+
+   });
+    </script>
+
 {% endblock %}

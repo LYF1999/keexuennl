@@ -14,7 +14,7 @@ body {
     .content form input {
       position: absolute;
       left: 50.5%;
-      width: 36%;
+      width: 35%;
       border: none;
       height: 3.2%;
       outline: none;
@@ -27,9 +27,9 @@ body {
     .content form input#id_mobile_phone {
       top: 61.9%; }
     .content form input#id_date {
-      top: 68.9%; }
-    .content form input#id_supervisor {
       top: 75.7%; }
+    .content form input#id_supervisor {
+      top: 68.9%; }
     .content form input#id_auth_no {
       top: 82.3%; }
 
