@@ -3,8 +3,14 @@ from django.shortcuts import render
 from agentauth.models import Agent
 from .forms import Authorize
 from django.http import JsonResponse
+from .forms import Authorize, Login
+from django.http import JsonResponse, HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import reverse
+import django.contrib.auth as auth
 
 
+@login_required
 def command(request):
     form = Authorize()
     if request.method == "GET":
@@ -53,3 +59,30 @@ def command(request):
             return JsonResponse({
                 'result': True
             })
+
+
+def login(request):
+    if request.method == "GET":
+        form = Login()
+        return render(request, 'login.html', {
+            'form': form
+        })
+    else:
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        print request.POST
+        if username and password:
+            user = auth.authenticate(username=username, password=password)
+            if user is not None and user.is_staff:
+                auth.login(request, user)
+                return JsonResponse({
+                    'result': True
+                }, safe=False)
+        return JsonResponse({
+            'result': False,
+        })
+
+
+def user_logout(request):
+    auth.logout(request)
+    return HttpResponseRedirect('/')

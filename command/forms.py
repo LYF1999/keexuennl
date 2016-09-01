@@ -26,3 +26,12 @@ class Authorize(forms.ModelForm):
     class Meta:
         model = Agent
         fields = ('name', 'wechat_no', 'mobile_phone', 'supervisor', 'date', 'auth_no')
+
+
+class Login(forms.Form):
+    username = forms.CharField(max_length=20, required=True, widget=forms.TextInput({
+        'autocomplete': 'off',
+    }))
+    password = forms.CharField(max_length=20, required=True, widget=forms.PasswordInput({
+        'autocomplete':'off',
+    }))

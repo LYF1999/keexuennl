@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}登录{% endblock %}
+{% block header %}{% endblock %}
+{% block content %}
+    <link rel="stylesheet" href="/static/login.css">
+<div class="content">
+    <img class="img-responsive" src="/static/login.png">
+    <form method="post" class="forml">
+        {% csrf_token %}
+        {{ form.username }}
+        {{ form.password }}
+        <p class="error1"></p>
+        <p class="error2"></p>
+        <button type="submit" class="bt1"></button>
+        <button type="button" class="bt2"></button>
+    </form>
+</div>
+<script type="text/javascript">
+$(".bt2").click(function () {
+    window.location.href = '/'
+});
+$(".forml").submit(function () {
+     $.post("/command/login/",
+                {
+                    csrfmiddlewaretoken:$("input[type='hidden']").val(),
+                    username:$("#id_username").val(),
+                    password:$("#id_password").val()
+                },
+                function(data,status){
+                    if (data.result){
+                        window.location.href = '/command/'
+                    }
+                    else {
+                        $(".error1").text("＊ 错误");
+                        $(".error2").text("＊ 错误");
+                    }
+                });
+    return false
+})
+</script>{% endblock %}
+{% block footer %}{% endblock %}

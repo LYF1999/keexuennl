@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/static/bootstrap-datetimepicker.min.css">
 <div class="content" id="head">
     <img src="/static/command.png" class="img-responsive">
-    <form method="post" id="form1">
+    <form method="post" id="formc">
         {% csrf_token %}
         {{ form.name }}
         {{ form.wechat_no }}
@@ -36,7 +36,7 @@
     <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="/static/bootstrap-datetimepicker.min.js"></script>
     <script type="text/javascript">
-    $("#form1").submit(function () {
+    $("#formc").submit(function () {
         $.post("/command/",
                 {   mobile_phone:$("#id_mobile_phone").val(),
                     csrfmiddlewaretoken:$("input[type='hidden']").val(),
@@ -72,7 +72,7 @@
 		forceParse: 0
    });
     $("button.close").click(function () {
-        location.href = "/"
+        location.href = "/logout/"
     })
     $(".success").click(function () {
         $(".over").css('display','none')
