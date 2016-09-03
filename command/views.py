@@ -44,7 +44,7 @@ def command(request):
             errors['error3'] = '＊ 已存在'
         if Agent.objects.filter(auth_no=request.POST.get('auth_no')).exists():
             errors['error6'] = '＊ 已存在'
-        if errors:
+        if errors['error1'] or errors['error2'] or errors['error3'] or errors['error4'] or errors['error5'] or errors['error6']:
             return JsonResponse({
                 'result': False,
                 'errors': errors,
