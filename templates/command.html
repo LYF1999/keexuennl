@@ -9,6 +9,7 @@
     <form method="post" id="formc">
         {% csrf_token %}
         {{ form.name }}
+        {{ form.level }}
         {{ form.wechat_no }}
         {{ form.mobile_phone }}
         {{ form.supervisor }}
@@ -17,11 +18,12 @@
         <button class="submit" type="submit"></button>
         <button class="close" type="button"></button>
         <p class="error1 errors"></p>
-        <p class="error2 errors">{{ errors.error2 }}</p>
-        <p class="error3 errors">{{ errors.error3 }}</p>
+        <p class="error2 errors"></p>
+        <p class="error3 errors"></p>
         <p class="error4 errors"></p>
         <p class="error5 errors"></p>
-        <p class="error6 errors">{{ errors.error6 }}</p>
+        <p class="error6 errors"></p>
+        <p class="error7 errors"></p>
     </form>
 </div>
     {% block footer %}{% endblock %}
@@ -41,6 +43,7 @@
                 {   mobile_phone:$("#id_mobile_phone").val(),
                     csrfmiddlewaretoken:$("input[type='hidden']").val(),
                     name:$("#id_name").val(),
+                    level:$("#id_level").val(),
                     wechat_no:$("#id_wechat_no").val(),
                     supervisor:$("#id_supervisor").val(),
                     date:$("#id_date").val(),
@@ -52,11 +55,12 @@
                     }
                     else {
                         $(".error1").text(data.errors.error1);
-                        $(".error2").text(data.errors.error2);
-                        $(".error3").text(data.errors.error3);
-                        $(".error4").text(data.errors.error4);
-                        $(".error5").text(data.errors.error5);
-                        $(".error6").text(data.errors.error6)
+                        $(".error2").text(data.errors.error7);
+                        $(".error3").text(data.errors.error2);
+                        $(".error4").text(data.errors.error3);
+                        $(".error5").text(data.errors.error4);
+                        $(".error6").text(data.errors.error5);
+                        $(".error7").text(data.errors.error6);
                     }
                 });
         return false

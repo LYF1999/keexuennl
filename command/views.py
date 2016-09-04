@@ -19,15 +19,18 @@ def command(request):
             'form': form
         })
     else:
-        errors = {'error1': '', 'error2': '', 'error3': '', 'error4': '', 'error5': '', 'error6': ''}
+        errors = {'error1': '', 'error2': '', 'error3': '', 'error4': '', 'error5': '', 'error6': '', 'error7':''}
         name = request.POST.get('name')
         wechat_no = request.POST.get('wechat_no')
+        level = request.POST.get('level')
         mobile_phone = request.POST.get('mobile_phone')
         supervisor = request.POST.get('supervisor')
         date = request.POST.get('date')
         auth_no = request.POST.get('auth_no')
         if not name:
             errors['error1'] = '＊ 未填写'
+        if not level:
+            errors['error7'] = '＊ 未填写'
         if not wechat_no:
             errors['error2'] = '＊ 未填写'
         if not mobile_phone:
