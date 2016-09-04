@@ -56,6 +56,7 @@ def command(request):
             })
         else:
             Agent.objects.create(name=name,
+                                 level = level,
                                  wechat_no=wechat_no,
                                  mobile_phone=mobile_phone,
                                  supervisor=supervisor,
