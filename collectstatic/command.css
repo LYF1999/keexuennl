@@ -18,7 +18,6 @@ body {
       border: none;
       height: 2.8%;
       outline: none;
-      background-color: transparent;
       color: #fff; }
     .content form input#id_name {
       top: 40.8%; }
@@ -51,8 +50,7 @@ body {
       height: 2.3%;
       background-color: #fff;
       line-height: 30px;
-      color: #ff921e;
-      background-color: transparent; }
+      color: #ff921e; }
     .content form .error1 {
       top: 40.8%; }
     .content form .error2 {

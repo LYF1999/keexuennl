@@ -7,6 +7,9 @@ class Authorize(forms.ModelForm):
     name = forms.CharField(widget=forms.TextInput({
         'autocomplete': 'off'
     }))
+    level = forms.CharField(widget=forms.TextInput({
+        'autocomplete':'off'
+    }))
     wechat_no = forms.CharField(widget=forms.TextInput({
         'autocomplete': 'off'
     }))

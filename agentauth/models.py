@@ -7,6 +7,7 @@ from django.db import models
 class Agent(models.Model):
     name = models.CharField('名称', max_length=255)
     wechat_no = models.CharField('微信号', max_length=255, unique=True)
+    level = models.CharField('等级', max_length=255, null=True, blank=True)
     mobile_phone = models.CharField('手机号', max_length=255, unique=True)
     supervisor = models.CharField('上级名称', max_length=255)
     date = models.DateField('授权日期', null=True)
