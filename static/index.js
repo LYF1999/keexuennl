@@ -101,7 +101,7 @@ function showmodal(src) {
 function cyclic() {
     a++;
     setTimeout(function () {
-        if (a%2){
+        if (a%3==0){
             $("div.founder p.introduce").text('Yiran Lee');
             $("div.founder p.a1").text('Yiran Lee');
             $("div.founder p.a2").text('我开始以为生活的态度只有一种,工作的感觉也只有一中,但是慢慢成长后,发现原来生命中是有那么多色彩的,那么多的可能,没有限制,一切基于都在进行中')
@@ -109,14 +109,22 @@ function cyclic() {
                 'there are so many colors and so many possibilities in our life.There is no limit,all opportunities are processig."');
          team.css("background-image", 'url("static/team-1.jpg")');
     }
-    else {
+    else if(a%3==1){
             $("div.founder p.introduce").text('Fiona Chan');
             $("div.founder p.a1").text('Fiona Chan');
             $("div.founder p.a2").text('那么久的国外生活,游历了40多个国家,不敢说活透了人生,但是觉得原来一切的变化与不同我们都是可以接受和理解的。人生百态,活法不只有一中,我只是选择我喜爱的那个方向前进着。')
             $("div.founder p.a3").text('"Living abroad for a long time,traveled to more than 40 countries.Does not dare to speak comprehend everything,but knowing that the all different we met before should beacceptabled and understandabled.The vicissitudes of life,"'+
-            'life style is not only have one way,so I choose my favorite direction to go forward.')
+            'life style is not only have one way,so I choose my favorite direction to go forward."')
         team.css("background-image", 'url("static/team-2.jpg")');
     }
+        else if(a%3==2){
+             $("div.founder p.introduce").text('A-Lin');
+            $("div.founder p.a1").text('A-Lin');
+            $("div.founder p.a2").text('"让你所爱的美成为你要做的事。"');
+            $("div.founder p.a3").text('"Let the beauty of what you love be what you do."');
+        team.css("background-image", 'url("static/team-3.jpg")');
+
+        }
         cyclic()
     },4000)
 }
