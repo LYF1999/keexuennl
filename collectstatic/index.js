@@ -114,7 +114,7 @@ function cyclic() {
             $("div.founder p.a1").text('Fiona Chan');
             $("div.founder p.a2").text('那么久的国外生活,游历了40多个国家,不敢说活透了人生,但是觉得原来一切的变化与不同我们都是可以接受和理解的。人生百态,活法不只有一中,我只是选择我喜爱的那个方向前进着。')
             $("div.founder p.a3").text('"Living abroad for a long time,traveled to more than 40 countries.Does not dare to speak comprehend everything,but knowing that the all different we met before should beacceptabled and understandabled.The vicissitudes of life,"'+
-            'life style is not only have one way,so I choose my favorite direction to go forward.')
+            'life style is not only have one way,so I choose my favorite direction to go forward."')
         team.css("background-image", 'url("static/team-2.jpg")');
     }
         cyclic()
