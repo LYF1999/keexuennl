@@ -138,6 +138,12 @@ function lunbo() {
 
 function check_size() {
     $(".text").height($(".pic").height())
+    if (window.innerWidth<=553){
+            $(".p1").css('margin-bottom','12px')
+        }
+    else {
+        $(".p1").css('margin-bottom','60px')
+        }
         if(window.innerWidth<=600){
 
             $(".contact .col-xs-offset-1").addClass('col-xs-offset-2 col-xs-8')
@@ -233,6 +239,9 @@ function check_size() {
             $(".founder .col-xs-5").addClass('col-xs-8 col-xs-offset-2')
             $(".founder .col-xs-5").removeClass('col-xs-5');
             $(".team").height($(".team").width()/people_ratio)
+            $("div.feedback").css({
+                'height':'400px',
+            });
             $("p.s2").css('margin-top','50px')
         }else{
             $(".founder .person").addClass('col-xs-5 col-xs-offset-1')
