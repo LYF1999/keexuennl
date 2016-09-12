@@ -8,6 +8,7 @@ from django.http import JsonResponse, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import reverse
 import django.contrib.auth as auth
+from command.models import Gallery
 import re
 
 
@@ -19,7 +20,7 @@ def command(request):
             'form': form
         })
     else:
-        errors = {'error1': '', 'error2': '', 'error3': '', 'error4': '', 'error5': '', 'error6': '', 'error7':''}
+        errors = {'error1': '', 'error2': '', 'error3': '', 'error4': '', 'error5': '', 'error6': '', 'error7': ''}
         name = request.POST.get('name')
         wechat_no = request.POST.get('wechat_no')
         level = request.POST.get('level')
@@ -49,14 +50,15 @@ def command(request):
             errors['error3'] = '＊ 已存在'
         if Agent.objects.filter(auth_no=request.POST.get('auth_no')).exists():
             errors['error6'] = '＊ 已存在'
-        if errors['error1'] or errors['error2'] or errors['error3'] or errors['error4'] or errors['error5'] or errors['error6']:
+        if errors['error1'] or errors['error2'] or errors['error3'] or errors['error4'] or errors['error5'] or errors[
+            'error6']:
             return JsonResponse({
                 'result': False,
                 'errors': errors,
             })
         else:
             Agent.objects.create(name=name,
-                                 level = level,
+                                 level=level,
                                  wechat_no=wechat_no,
                                  mobile_phone=mobile_phone,
                                  supervisor=supervisor,
@@ -93,3 +95,19 @@ def login(request):
 def user_logout(request):
     auth.logout(request)
     return HttpResponseRedirect('/')
+
+
+def check_name(name):
+    if not Gallery.objects.filter(name=name).exists():
+        Gallery.objects.create(name=name)
+
+
+def create_gallery():
+    for i in range(1, 25):
+        check_name(name='gallery' + str(i))
+    check_name(name='gallery1-1')
+    check_name(name='gallery8-1')
+    check_name(name='gallery13-1')
+    check_name(name='gallery20-1')
+    check_name(name='gallery2,3,7,9..')
+    check_name(name='gallery')
