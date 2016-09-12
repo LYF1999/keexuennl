@@ -35,26 +35,7 @@ $(function () {
     $(".ahead").click(function () {
         $.scrollTo("#head", 2000)
     })
-        $("a.g1").click(function () {
-            showmodal("static/gallery-1-1.jpg")
-            return false
-        });
-        $("a.g8").click(function () {
-            showmodal("static/gallery-8-1.jpg")
-            return false
-        });
-        $("a.g13").click(function () {
-            showmodal("static/gallery-13-1.jpg")
-            return false
-        });
-        $("a.g20").click(function () {
-            showmodal("static/gallery-20-1.jpg")
-            return false
-        });
-        $("a.g").click(function () {
-            showmodal("static/gallery.jpg")
-            return false
-        });
+        
     $("img.search").click(function () {
         $('.form1').submit()
     });
