@@ -1,0 +1,55 @@
+body {
+  max-width: 650px;
+  margin: auto; }
+.content{
+  position: relative;
+  form{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    input{
+      position: absolute;
+      left:36%;
+      height: 3.8%;
+      width: 47.6%;
+      color: #fff;
+      background-color: transparent;
+      outline: none;
+    }
+    input#id_username{
+      top:46%;
+    }
+    input#id_password{
+      top: 58.3%;
+    }
+    button{
+      position: absolute;
+      bottom:9.7%;
+      width: 15%;
+      height: 5.3%;
+      background-color: transparent;
+      border: none;
+    }
+    button.bt1{
+      left:27%;
+    }
+    button.bt2{
+      right: 27%;
+    }
+    p{
+      color: #ff921e;
+      position: absolute;
+      left: 85%;
+      height: 3.6%;
+      line-height: 30px;
+      width: 10%;
+    }
+    p.error1{
+      top:46%;
+    }
+    p.error2{
+      top:58.3%;
+    }
+  }
+}

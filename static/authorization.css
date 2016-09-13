@@ -18,25 +18,19 @@ body {
       text-align: center; }
     .content div.absolute p#authorize {
       width: 18%;
-      top: 36.5%;
+      top: 34.1%;
       background-color: transparent;
       border: none;
       outline: none; }
     .content div.absolute p#Wechat {
-      top: 42%;
+      top: 40%;
       width: 34%;
       background-color: transparent;
       border: none;
       outline: none; }
     .content div.absolute p#mobile {
-      top: 48%;
+      top: 46%;
       width: 28.3%;
-      background-color: transparent;
-      border: none;
-      outline: none; }
-    .content div.absolute p#supervisor {
-      top: 53.1%;
-      width: 19.8%;
       background-color: transparent;
       border: none;
       outline: none; }
@@ -46,9 +40,9 @@ body {
     font-size: 14px; }
   .content p.line1 {
     left: 26%;
-    bottom: 22.5%; }
+    bottom: 23.7%; }
   .content p.line2 {
     left: 39%;
-    bottom: 19.5%; }
+    bottom: 20.5%; }
 
 /*# sourceMappingURL=authorization.css.map */
