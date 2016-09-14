@@ -14,9 +14,9 @@ body {
       position: absolute;
       color: #fff;
       height: 3%;
-      right: 17%;
+      right: 13%;
       border: none;
-      text-align: center; }
+      padding-left: 1%; }
     .content div.absolute p#authorize {
       width: 28.6%;
       top: 36.8%;
@@ -45,13 +45,14 @@ body {
 
 @media screen and (max-width: 572px) {
   p#authorize {
-    top: 36% !important; }
+    top: 36% !important;
+    font-size: 13px; }
 
   p#Wechat {
-    top: 43.8% !important; }
+    top: 43.3% !important; }
 
   p#mobile {
-    top: 51.5% !important; }
+    top: 51% !important; }
 
   p.line1 {
     bottom: 22.5% !important; }
