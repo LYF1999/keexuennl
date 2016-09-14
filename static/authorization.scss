@@ -15,27 +15,25 @@ body{
       color: #fff;
       height: 3%;
       right:17%;
+      border: none;
       text-align: center;
     }
     p#authorize{
-      width: 18%;
-      top:34.1%;
+      width: 28.6%;
+      top:36.8%;
       background-color: transparent;
-      border: none;
       outline: none;
     }
     p#Wechat{
-      top: 40%;
-      width: 34%;
+      top: 44.8%;
+      width: 34.5%;
       background-color: transparent;
-      border: none;
       outline: none;
     }
     p#mobile{
-      top:46%;
-      width:28.3%;
+      top:52.5%;
+      width:34.3%;
       background-color: transparent;
-      border: none;
       outline: none;
     }
 
@@ -47,10 +45,28 @@ body{
   }
   p.line1{
     left: 26%;
-    bottom: 23.7%;
+    bottom: 23.8%;
   }
   p.line2{
     left: 39%;
-    bottom: 20.5%;
+    bottom: 19%;
   }
+}
+@media screen and (max-width: 572px){
+  p#authorize{
+    top:36%!important;
+  }
+  p#Wechat{
+    top: 43.8%!important;
+  }
+  p#mobile{
+    top: 51.5%!important;
+  }
+  p.line1{
+    bottom: 22.5%!important;
+  }
+  p.line2{
+    bottom: 18%!important;
+  }
+
 }
