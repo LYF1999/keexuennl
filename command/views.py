@@ -48,7 +48,7 @@ def command(request):
             errors['error2'] = '＊ 已存在'
         if Agent.objects.filter(mobile_phone=request.POST.get('mobile_phone')).exists():
             errors['error3'] = '＊ 已存在'
-        if Agent.objects.filter(auth_no=request.POST.get('auth_no')).exists():
+        if auth_no and Agent.objects.filter(auth_no=request.POST.get('auth_no')).exists():
             errors['error6'] = '＊ 已存在'
         if errors['error1'] or errors['error2'] or errors['error3'] or errors['error4'] or errors['error5'] or errors[
             'error6']:
