@@ -40,8 +40,8 @@ def command(request):
             errors['error4'] = '＊ 未填写'
         if not date:
             errors['error5'] = '＊ 未填写'
-        if not auth_no:
-            errors['error6'] = '＊ 未填写'
+        # if not auth_no:
+        #     errors['error6'] = '＊ 未填写'
         if not re.match(u'^\d{4}-[0-1][0-9]-[0-3][0-9]$', date):
             errors['error5'] = '＊ 格式错误'
         if Agent.objects.filter(wechat_no=request.POST.get('wechat_no')).exists():
