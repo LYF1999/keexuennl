@@ -24,7 +24,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index, name='index'),
     url(r'^auth/', include('agentauth.urls')),
-    url(r'^command/', include('command.urls')),
+    # url(r'^command/', include('command.urls')),
     url(r'^logout/', user_logout, name='logout'),
     url(r'^media/(?P<path>.*)$', django.views.static.serve, {
         'document_root': settings.MEDIA_ROOT}),
