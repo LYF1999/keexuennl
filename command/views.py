@@ -1,6 +1,8 @@
-# coding=utf-8
+# coding: utf-8
 from django.shortcuts import render
 from agentauth.models import Agent
+from .forms import Authorize
+from django.http import JsonResponse
 from .forms import Authorize, Login
 from django.http import JsonResponse, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
@@ -38,15 +40,15 @@ def command(request):
             errors['error4'] = '＊ 未填写'
         if not date:
             errors['error5'] = '＊ 未填写'
-        if not auth_no:
-            errors['error6'] = '＊ 未填写'
+        # if not auth_no:
+        #     errors['error6'] = '＊ 未填写'
         if not re.match(u'^\d{4}-[0-1][0-9]-[0-3][0-9]$', date):
             errors['error5'] = '＊ 格式错误'
         if Agent.objects.filter(wechat_no=request.POST.get('wechat_no')).exists():
             errors['error2'] = '＊ 已存在'
         if Agent.objects.filter(mobile_phone=request.POST.get('mobile_phone')).exists():
             errors['error3'] = '＊ 已存在'
-        if Agent.objects.filter(auth_no=request.POST.get('auth_no')).exists():
+        if auth_no and Agent.objects.filter(auth_no=request.POST.get('auth_no')).exists():
             errors['error6'] = '＊ 已存在'
         if errors['error1'] or errors['error2'] or errors['error3'] or errors['error4'] or errors['error5'] or errors[
             'error6']:
