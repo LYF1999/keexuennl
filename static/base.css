@@ -106,6 +106,8 @@ header {
 
 footer {
   background-color: #000; }
+  footer .address {
+    visibility: hidden; }
   footer .clearfix {
     padding-bottom: 40px; }
     footer .clearfix p.title {
