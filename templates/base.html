@@ -6,6 +6,7 @@
     <title>{% block title %}首页{% endblock %}</title>
 <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/base.css">
+
 <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body>
@@ -60,11 +61,12 @@
 {% block content %}
 {% endblock %}
 {% block footer %}
-    <div class="error">
+   <div class="error2">
+    <div class="img-e">
 	<img class="img-responsive" src="/static/error.jpg">
 	<button type="button" class="">
 		<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-	</button>
+	</button></div>
 </div>
 <footer>
     <div class="clearfix">
@@ -78,9 +80,9 @@
         201620</p>
 
     </div>
-    <div class="authorization col-xs-5 clearfix">
+    <div class="authorization col-xs-5">
         <p class="title">Authorization Queries</p>
-        <form method="get" action="auth/">
+        <form method="get" action="auth/" class="form2">
             <input type="text" name="query2" placeholder="代理商姓名/微信号">
             <button type="button">授权查询</button>
         </form>
@@ -89,11 +91,11 @@
     </div></div>
     <div class="footer clearfix">
         <ul>
-            <li><a href="/#">Home</a>|</li>
-            <li><a href="/#AboutUs">About</a>|</li>
-            <li><a href="/#Founder">Team</a>|</li>
-            <li><a href="/#Leather">Product</a>|</li>
-            <li><a href="/#Contact">Contact</a></li>
+            <li><a href="#" class="aAboutUs">About Us</a>|</li>
+            <li><a href="#" class="aFounder">Team</a>|</li>
+            <li><a href="#" class="aLeather">Leather Pants</a>|</li>
+            <li><a href="#" class="aGallery">Gallery</a>|</li>
+            <li><a href="#" class="aContact2">Contact</a></li>
         </ul>
         <a href="http://www.miitbeian.gov.cn" target="_blank"><p>
             Copyright©广州溢然贸易有限公司.All RIGHT RESERVED 粤ICP备16007262号-1
