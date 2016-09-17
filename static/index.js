@@ -46,9 +46,15 @@ $(function () {
         var value = $("input[name='query1']").val();
        $.getJSON("/auth/api/?query="+value, function(ret){
             if(!ret.result){
-               $(".error2").css("display", 'block')
+                $(".error2").css("display", 'block')
             }else {
-                location.href='/auth/?query='+value
+                alert(ret.result);
+                if (ret.result==2){
+                    $(".error2 img").attr('src', '/static/repeatname.jpg')
+                    $(".error2").css("display", 'block')
+                }else{
+                    location.href='/auth/?query='+value
+                }
             }
         });
         return false;
@@ -57,9 +63,14 @@ $(function () {
         var value2 = $("input[name='query2']").val();
          $.getJSON("/auth/api/?query="+value2, function(ret){
             if(!ret.result){
-               $(".error2").css("display", 'block')
+                $(".error2").css("display", 'block')
             }else {
-                location.href='/auth/?query='+value
+                if (ret.result==1){
+                    $(".error2 img").attr('src', '/static/repeatname.jpg')
+                    $(".error2").css("display", 'block')
+                }else{
+                    location.href='/auth/?query='+value
+                }
             }
         });
         return false

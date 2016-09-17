@@ -14,18 +14,18 @@ body{
       position: absolute;
       color: #fff;
       height: 3%;
-      right:13%;
+      right:15%;
       border: none;
       padding-left: 1%;
     }
     p#authorize{
       width: 28.6%;
-      top:36.8%;
+      top:39%;
       background-color: transparent;
       outline: none;
     }
     p#Wechat{
-      top: 44.8%;
+      top: 48.8%;
       width: 34.5%;
       background-color: transparent;
       outline: none;
@@ -45,26 +45,26 @@ body{
   }
   p.line1{
     left: 26%;
-    bottom: 23.8%;
+    bottom: 20.8%;
   }
   p.line2{
     left: 39%;
-    bottom: 19%;
+    bottom: 17%;
   }
 }
 @media screen and (max-width: 572px){
   p#authorize{
-    top:36%!important;
+    top:38.5%!important;
     font-size: 13px;
   }
   p#Wechat{
-    top: 43.3%!important;
+    top: 47.4%!important;
   }
   p#mobile{
-    top: 51%!important;
+    top: 49%!important;
   }
   p.line1{
-    bottom: 22.5%!important;
+    bottom: 19.5%!important;
   }
   p.line2{
     bottom: 18%!important;

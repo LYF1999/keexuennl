@@ -15,4 +15,7 @@ def auth(request):
             name=request.GET['query']).exists()):
         return JsonResponse({'result': False})
     else:
+        if (Agent.objects.filter(wechat_no=request.GET['query']).count() == 0) and (Agent.objects.filter(
+                name=request.GET['query']).count() > 1):
+            return JsonResponse({'result': 2})
         return JsonResponse({'result': True})
