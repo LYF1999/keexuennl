@@ -62,7 +62,6 @@ $(function () {
     $(".form2").submit(function () {
         var value2 = $("input[name='query2']").val();
          $.getJSON("/auth/api/?query="+value2, function(ret){
-             alert(ret.result)
             if(!ret.result){
                 $(".error2 img").attr('src', '/static/error.jpg')
                 $(".error2").css("display", 'block')
