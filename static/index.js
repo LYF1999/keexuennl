@@ -247,7 +247,7 @@ function check_size() {
             $(".founder .col-xs-5").removeClass('col-xs-5');
             $(".team").height($(".team").width()/people_ratio)
             $("div.feedback").css({
-                'height':'400px',
+                'height':'300px'
             });
             $("p.s2").css('margin-top','50px')
         }else{
