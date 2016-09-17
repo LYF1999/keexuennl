@@ -46,6 +46,7 @@ $(function () {
         var value = $("input[name='query1']").val();
        $.getJSON("/auth/api/?query="+value, function(ret){
             if(!ret.result){
+                $(".error2 img").attr('src', '/static/error.jpg')
                 $(".error2").css("display", 'block')
             }else {
                 if (ret.result==2){
@@ -61,14 +62,16 @@ $(function () {
     $(".form2").submit(function () {
         var value2 = $("input[name='query2']").val();
          $.getJSON("/auth/api/?query="+value2, function(ret){
+             alert(ret.result)
             if(!ret.result){
+                $(".error2 img").attr('src', '/static/error.jpg')
                 $(".error2").css("display", 'block')
             }else {
-                if (ret.result==1){
+                if (ret.result==2){
                     $(".error2 img").attr('src', '/static/repeatname.jpg')
                     $(".error2").css("display", 'block')
                 }else{
-                    location.href='/auth/?query='+value
+                    location.href='/auth/?query='+value2
                 }
             }
         });
