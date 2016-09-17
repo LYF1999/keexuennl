@@ -48,7 +48,6 @@ $(function () {
             if(!ret.result){
                 $(".error2").css("display", 'block')
             }else {
-                alert(ret.result);
                 if (ret.result==2){
                     $(".error2 img").attr('src', '/static/repeatname.jpg')
                     $(".error2").css("display", 'block')
