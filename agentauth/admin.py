@@ -4,5 +4,6 @@ from .models import Agent
 
 class AgentAdmin(admin.ModelAdmin):
     list_display = ('name', 'wechat_no', 'mobile_phone', 'supervisor', 'date')
+    search_fields = ('name', 'mobile_phone')
 
 admin.site.register(Agent, AgentAdmin)
