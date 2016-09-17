@@ -131,12 +131,14 @@
         </div>
             </div></div>
         <script type="text/javascript">
-            $("div.feedback").height($("div.team").height());
-
+            if(window.innerWidth>=996){$("div.feedback").height($("div.team").height());
             $("img.founder").load(function () {
                $("div.feedback").height($("div.team").height());
 
-            })
+            })}
+            else{
+                
+            }
 
     </script>
     </div>
