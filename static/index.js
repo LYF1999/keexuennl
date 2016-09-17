@@ -119,16 +119,16 @@ function cyclic() {
         else if(a%5==3){
             $("div.founder p.introduce").text('Queena');
             $("div.founder p.a1").text('Queena');
-            $("div.founder p.a2").text('要么你就喜欢现在的你自己,要么努力成为你喜欢的那个自己。')
-            $("div.founder p.a3").text('"Either you like now of oneself, or trying to become you like that myself."')
+            $("div.founder p.a2").text('每个女孩都该做到两点：有品位并且光芒四射。')
+            $("div.founder p.a3").text('"A girl should be two things: classy and fabulous."')
         team.css("background-image", 'url("static/team-4.jpg")');
 
         }
         else if(a%5==4){
             $("div.founder p.introduce").text('Eggy');
             $("div.founder p.a1").text('Eggy');
-            $("div.founder p.a2").text('每个女孩都该做到两点：有品位并且光芒四射。')
-            $("div.founder p.a3").text('"A girl should be two things: classy and fabulous."')
+            $("div.founder p.a2").text('要么你就喜欢现在的你自己,要么努力成为你喜欢的那个自己。')
+            $("div.founder p.a3").text('"Either you like now of oneself, or trying to become you like that myself."')
         team.css("background-image", 'url("static/team-5.jpg")');
 
         }
