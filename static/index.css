@@ -551,6 +551,8 @@ footer .clearfix {
   footer .clearfix p.en {
     font-family: Arial;
     color: #cccccc; }
+  footer .clearfix .address {
+    visibility: hidden; }
   footer .clearfix .authorization form {
     margin-top: 30px; }
   footer .clearfix .authorization input {

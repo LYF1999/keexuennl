@@ -12,8 +12,11 @@ def index(request):
         return HttpResponseNotFound()
     if not request.GET['query']:
         return HttpResponseNotFound()
+
     if Agent.objects.filter(wechat_no=request.GET['query']).exists():
         agent = get_object_or_404(Agent, wechat_no=request.GET['query'])
     else:
+        if Agent.objects.filter(name=request.GET['query']).count()>1:
+            return HttpResponseNotFound()
         agent = get_object_or_404(Agent, name=request.GET['query'])
     return render(request, 'authorization.html', locals())

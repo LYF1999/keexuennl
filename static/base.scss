@@ -121,6 +121,9 @@ header{
 }
 footer{
   background-color: #000;
+  .address{
+      visibility: hidden;
+    }
   .clearfix{
     padding-bottom: 40px;
     p.title{
