@@ -1,5 +1,4 @@
 body {
-  max-width: 719px;
   margin: auto; }
 
 .content {
@@ -9,55 +8,44 @@ body {
     top: 0;
     width: 100%;
     height: 100%; }
+    .content div.absolute strong {
+      font-weight: 600; }
     .content div.absolute p {
-      font-size: 120%;
+      font-weight: 400;
       position: absolute;
-      color: #fff;
-      height: 3%;
-      right: 15%;
+      color: #000;
+      left: 19%;
+      width: 60%;
       border: none;
-      padding-left: 1%; }
+      padding-left: 1%;
+      font-size: 20px; }
     .content div.absolute p#authorize {
-      width: 30.6%;
-      top: 39%;
+      top: 48%;
       background-color: transparent;
       outline: none; }
-    .content div.absolute p#Wechat {
-      top: 48.8%;
-      width: 34.5%;
+    .content div.absolute p#Wechat, .content div.absolute p#cinderella, .content div.absolute p#auth_no, .content div.absolute p.line1 {
+      top: 51.5%;
       background-color: transparent;
       outline: none; }
-    .content div.absolute p#mobile {
-      top: 52.5%;
-      width: 34.3%;
-      background-color: transparent;
-      outline: none; }
+    .content div.absolute p#cinderella, .content div.absolute p#auth_no, .content div.absolute p.line1 {
+      top: 55%; }
+    .content div.absolute p#auth_no, .content div.absolute p.line1 {
+      top: 58.5%; }
+    .content div.absolute p.line1 {
+      top: 62%; }
   .content p {
     position: absolute;
     color: #fff;
     font-size: 14px; }
-  .content p.line1 {
-    left: 26%;
-    bottom: 20.8%; }
   .content p.line2 {
     left: 39%;
     bottom: 17%; }
 
-@media screen and (max-width: 572px) {
-  p#authorize {
-    top: 39.5% !important;
-    font-size: 11px; }
-
-  p#Wechat {
-    top: 47.4% !important; }
-
-  p#mobile {
-    top: 49% !important; }
-
-  p.line1 {
-    bottom: 19.5% !important; }
-
-  p.line2 {
-    bottom: 18% !important; } }
+@media screen and (max-width: 750px) {
+  div.absolute p {
+    font-size: 16px !important; } }
+@media screen and (max-width: 668px) {
+  div.absolute p {
+    font-size: 12px !important; } }
 
 /*# sourceMappingURL=authorization.css.map */
