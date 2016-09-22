@@ -20,6 +20,8 @@ body{
       border: none;
       padding-left: 1%;
       font-size: 20px;
+      background-color: transparent;
+      outline: none;
     }
     p#authorize{
       top:48%;
@@ -32,16 +34,16 @@ body{
       outline: none;
     }
     p#cinderella{
-      @extend p#Wechat;
+
       top:55%;
     }
     p#auth_no{
-      @extend p#cinderella;
+
       top: 58.5%;
     }
     p.line1{
-      @extend p#auth_no;
-      top:62%
+
+      top:58.5%
   }
 
   }
@@ -61,42 +63,37 @@ body{
       font-size: 16px!important;
     }
   }
-  p#authorize{
 
-  }
-  p#Wechat{
-
-  }
-  p#mobile{
-
-  }
-  p.line1{
-
-  }
-  p.line2{
-
-  }
 
 }
 @media screen and (max-width: 668px){
   div.absolute{
     p{
-      font-size: 12px!important;
+      font-size: 14px!important;
     }
   }
-  p#authorize{
+
+}
+@media screen and (max-width: 400px){
+  div.absolute{
+    p{
+      font-size: 12px!important;
+    }
+    p#authorize{
 
   }
   p#Wechat{
+    top: 54%!important;
 
   }
-  p#mobile{
+  p#cinderella{
+    top:57.5%!important;
 
   }
   p.line1{
+    top:63%!important;
 
   }
-  p.line2{
 
   }
 
