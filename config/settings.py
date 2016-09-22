@@ -82,7 +82,7 @@ DATABASES = {
         'NAME': 'keexuennl',
         'HOST': '127.0.0.1',
         'USER': 'root',
-        'PASSWORD': '123456',
+        'PASSWORD': 'yiqifeiyang',
     }
 }
 
