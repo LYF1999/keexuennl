@@ -10,8 +10,7 @@
         <p id="authorize">Hereby We Authorize: <strong class="weight">{{ agent.name }} 为 {{ agent.level }}</strong></p>
         <p id="Wechat" >Wechat No.: <strong>{{ agent.wechat_no }}</strong></p>
         <p id="cinderella">Cinderella's conjuration pants: <strong>{{ agent.supervisor }}</strong></p>
-        <p id="auth_no">Authorization Certificate No.: <strong>{{ agent.auth_no }}</strong></p>
-        <p class="line1">Duration of Authorization : <strong>{{ agent.start_date|date:"Y/m/d" }}-{{ agent.end_date|date:"Y/m/d" }}</strong></p>
+        <p class="line1">Duration of Authorization : <strong>{{ agent.start_date|date:"Y/m/d" }}</strong></p>
     </div>
 <script type="text/javascript" src="/static/authorization.js"></script>
 </div>
