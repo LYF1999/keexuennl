@@ -94,7 +94,7 @@ function showmodal(src) {
 function cyclic() {
     a++;
     setTimeout(function () {
-        if (a%5==0){
+        if (a%8==0){
             $("div.founder p.introduce").text('Yiran Lee');
             $("div.founder p.a1").text('Yiran Lee');
             $("div.founder p.a2").text('我开始以为生活的态度只有一种,工作的感觉也只有一中,但是慢慢成长后,发现原来生命中是有那么多色彩的,那么多的可能,没有限制,一切基于都在进行中')
@@ -102,7 +102,7 @@ function cyclic() {
                 'there are so many colors and so many possibilities in our life.There is no limit,all opportunities are processig."');
          team.css("background-image", 'url("static/team-1.jpg")');
     }
-    else if(a%5==1){
+    else if(a%8==1){
             $("div.founder p.introduce").text('Fiona Chan');
             $("div.founder p.a1").text('Fiona Chan');
             $("div.founder p.a2").text('那么久的国外生活,游历了40多个国家,不敢说活透了人生,但是觉得原来一切的变化与不同我们都是可以接受和理解的。人生百态,活法不只有一中,我只是选择我喜爱的那个方向前进着。')
@@ -110,7 +110,7 @@ function cyclic() {
             'life style is not only have one way,so I choose my favorite direction to go forward."')
         team.css("background-image", 'url("static/team-2.jpg")');
     }
-        else if(a%5==2){
+        else if(a%8==2){
              $("div.founder p.introduce").text('A-Lin');
             $("div.founder p.a1").text('A-Lin');
             $("div.founder p.a2").text('"让你所爱的美成为你要做的事。"');
@@ -118,7 +118,7 @@ function cyclic() {
         team.css("background-image", 'url("static/team-3.jpg")');
 
         }
-        else if(a%5==3){
+        else if(a%8==3){
             $("div.founder p.introduce").text('Queena');
             $("div.founder p.a1").text('Queena');
             $("div.founder p.a2").text('每个女孩都该做到两点：有品位并且光芒四射。')
@@ -126,12 +126,36 @@ function cyclic() {
         team.css("background-image", 'url("static/team-4.jpg")');
 
         }
-        else if(a%5==4){
+        else if(a%8==4){
             $("div.founder p.introduce").text('Eggy');
             $("div.founder p.a1").text('Eggy');
             $("div.founder p.a2").text('要么你就喜欢现在的你自己,要么努力成为你喜欢的那个自己。')
             $("div.founder p.a3").text('"Either you like now of oneself, or trying to become you like that myself."')
         team.css("background-image", 'url("static/team-5.jpg")');
+
+        }
+        else if(a%8==5){
+            $("div.founder p.introduce").text('Smile');
+            $("div.founder p.a1").text('Smile');
+            $("div.founder p.a2").text('对明天最好的准备就是今天做到最好。')
+            $("div.founder p.a3").text('The best preparation for tomorrow is doing yourbest today.')
+        team.css("background-image", 'url("static/team-6.jpg")');
+
+        }
+        else if(a%8==6){
+            $("div.founder p.introduce").text('Medusa');
+            $("div.founder p.a1").text('Medusa');
+            $("div.founder p.a2").text('不要与别人比较，因为你不知道别人是怎么一路走过来的！')
+            $("div.founder p.a3").text('Don\'t compare your life with others, you have no idea what their journey is all about.')
+        team.css("background-image", 'url("static/team-7.jpg")');
+
+        }
+        else if(a%8==7){
+            $("div.founder p.introduce").text('桃女王');
+            $("div.founder p.a1").text('桃女王');
+            $("div.founder p.a2").text('精明的商家可以将商业意识渗透到的每一件事中去，甚至是一举手一投足。充满商业细胞的人，赚钱可以是无处不在、无时不在。我是桃女王 汇聚气场磁场霸气美丽与一身的女子')
+            $("div.founder p.a3").text('The shrewd business sense business can permeate every thing to go, or next time. People full of commercial cells, money can be everywhere, no time is not in. I am the queen peach together with a beautiful aura field domineering woman')
+        team.css("background-image", 'url("static/team-8.jpg")');
 
         }
         cyclic()
