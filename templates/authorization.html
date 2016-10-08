@@ -3,9 +3,9 @@
 {% block content %}
     {% block header %}{% endblock %}
     <link rel="stylesheet" href="/static/authorization.css">
-<div class="content" id="head">
+<div class="content container-fluid" id="head">
 
-<img src="/static/certificate.jpg" class="img-responsive">
+<img src="/static/certificate.jpg" class="img-responsive col-xs-12">
     <div class="absolute">
         <p id="authorize">Hereby We Authorize: <strong class="weight">{{ agent.name }}</strong></p>
         <p id="Wechat" >Wechat No.: <strong>{{ agent.wechat_no }}</strong></p>
